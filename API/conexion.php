@@ -17,15 +17,17 @@
     // establecer y realizar consulta. guardamos en variable.
 	$consulta = "SELECT * FROM test_table";
     $resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
-    
-    echo 'conectando...';
+
+    $array = array();
 
     while ($columna = mysqli_fetch_array( $resultado ))
 	{
-		echo "<tr>";
-		echo "<td>" . $columna['table_id'] . "</td><td>" . $columna['latitud'] . "</td>";
-		echo "</tr>";
-	}
+		//echo $columna['table_id'] . '-' . $columna['latitud'] . " / ";
+        $array['datos'][] = $columna;
+    }
+
+    echo json_encode($array);
+
     // cerrar conexión de base de datos
 	mysqli_close( $conexion );
 
