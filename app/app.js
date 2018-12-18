@@ -1,8 +1,13 @@
-angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage'])
-.config(['$routeProvider', function($routeProvider) { 
+
+var configApp = function($routeProvider){
     $routeProvider
         .when('/',{
-            templateUrl: '/test_cmpc/cmpc/app/templates/index.template.html',
+            templateUrl: './app/templates/index.template.html',
             controller: 'testController'
         })
-}]);
+};
+ 
+var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage'])
+
+app.config(configApp)
+app.directive('navBar', NavBar);
