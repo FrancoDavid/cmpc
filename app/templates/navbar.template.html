@@ -6,38 +6,80 @@
         height: 100%;
         padding: 15px;
         width: auto;
-}
+    }
+    .nav-menu {
+        color:white !important;
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    .nav-menu-active{
+        color: #416529 !important;
+    }
+    .nav-inferior{
+        background-color: #bdbbbb;
+        width: 100%;
+    }
+    .logo-cmpc{
+        color:gray !important;
+        text-transform: none !important;
+    }
+    .nav-dropdown {
+        background-color: #bdbbbb !important;
+    }
+    .nav-dropdown:focus{
+        box-shadow: none !important;
+    }
+    .dropdown-menux{
+        cursor: pointer;
+    }
 </style>
 
-
 <!--Header-->
-<header>
-    <div class="container agile-banner_nav">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
-                <a href="#" class="navbar-left navbar-brand"><img src="./assets/images/cmpc_images/logo_cmpc.png" class="img-responsive logo-cmpc"></a>
-            
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#!">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#!">Sobre nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#!">Proyecto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#!">Riesgo ambiental</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#!">Monitoreo</a>
-                    </li>
-                </ul>
+<div ng-controller="MainController">
+    <header>
+            <div class="container agile-banner_nav">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand logo-cmpc" ng-click="toHome();">cmpc<span class="display"></span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
             </div>
-            
-        </nav>
+    </header>
+    <div class="nav-inferior">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/')}" ng-click="toHome();">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/sobre-nosotros')}" ng-click="toAbout();">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn nav-dropdown nav-link nav-menu dropdown-toggle" data-toggle="dropdown" ng-class="{'nav-menu-active' : toActiveProyecto()}">Proyecto
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="toMethod();" class="dropdown-menux">Metodología</a></li>
+                                    <li><a ng-click="toResult();" class="dropdown-menux">Resultados</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/riesgo-ambiental')}" ng-click="toRiesgoAmbiental();">Riesgo Ambiental</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-menu" ng-click="toMonitoreo();" ng-class="{'nav-menu-active' : toActive('/monitoreo')}">Monitoreo</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn">Ingresar
+                        </li>            
+                    </ul>
+                </div>
+                
+            </nav>
     </div>
-</header>
+</div>
+
 <!--Header-->
