@@ -29,3 +29,4 @@ var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage'])
 
 app.config(configApp)
 app.directive('navBar', NavBar);
+app.directive('footer', Footer)

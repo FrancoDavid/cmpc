@@ -32,6 +32,19 @@
     .dropdown-menux{
         cursor: pointer;
     }
+    .icon-cmpc{
+        position: relative;
+        top: -22px;
+        left: -31px;
+    }
+    .btn-cmpc{
+        background-color: #55ac33;
+        color: white;
+    }
+    .btn-cmpc:hover{
+        background-color: #3e7b26;
+    }
+
 </style>
 
 <!--Header-->
@@ -39,7 +52,7 @@
     <header>
             <div class="container agile-banner_nav">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand logo-cmpc" ng-click="toHome();">cmpc<span class="display"></span></a>
+                    <a class="navbar-brand logo-cmpc" ng-click="toHome();">cmpc <img src="./assets/images/cmpc_images/separador.png" class="img-responsive icon-cmpc"><span class="display"></span></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -73,7 +86,7 @@
                             <a class="nav-link nav-menu" ng-click="toMonitoreo();" ng-class="{'nav-menu-active' : toActive('/monitoreo')}">Monitoreo</a>
                         </li>
                         <li class="nav-item">
-                            <button class="btn">Ingresar
+                            <button class="btn btn-cmpc">Ingresar
                         </li>            
                     </ul>
                 </div>

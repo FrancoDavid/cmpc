@@ -391,7 +391,7 @@ h4.sub-tittle_w3ls {
 .process-grids h3:after {
     position: absolute;
     content: "";
-    background: #009688;
+	background: #96c438;
     height: 3px;
     width: 15%;
     bottom: -40%;
@@ -412,7 +412,7 @@ h4.sub-tittle_w3ls {
 }
 .process-grids li span.fas {
     width: 20px;
-    color: #009688;
+    color: #96c438;
 }
 /*-- //Process --*/
 
@@ -881,7 +881,7 @@ ul.portfolio-area li figure {
 .information h4:after {
     position: absolute;
     content: "";
-    background: #009688;
+    background: #96c438;
     height: 2px;
     width: 15%;
     bottom: -35%;
@@ -1561,7 +1561,7 @@ ul.rating li span.fas {
 	.navbar-light .navbar-toggler {
 		color: #fff;
 		border-color: #fff;
-		background: #009688;
+		background: #55ac33;
 	}
 	.navbar-toggler {
 		border-radius: 0;
