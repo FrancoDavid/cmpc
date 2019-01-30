@@ -77,7 +77,7 @@ li.nav-item {
     text-transform: capitalize;
     letter-spacing: 1px;
     padding: 0;
-    font-weight: 600;
+    font-weight: 500;
 	margin: 0;
 }
 span.display {
@@ -340,7 +340,7 @@ span.display {
     color: #666;
     text-decoration: underline;
 }
-.welcome a {
+/* .welcome a {
     background: #333;
     padding: 15px 30px;
     font-weight: 600;
@@ -351,7 +351,7 @@ span.display {
 }
 .welcome a:hover {
     background: #009688;
-}
+} */
 /*-- //about --*/
 
 /*-- modal --*/
@@ -1545,7 +1545,7 @@ ul.rating li span.fas {
 		padding: 1.5em;
 		padding-bottom: 2.5em;
 	}
-	.welcome_bottom h4 {
+	.welcome_bottom h4 {.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 		font-size: 27px;
 	}
 	.welcome_bottom h4.head {
@@ -1604,7 +1604,7 @@ ul.rating li span.fas {
 		height: 33em;
 	}
 }
-@media(max-width: 736px){
+@media(max-width: 736px){.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 	.portfolio-area li {
 		width: 208px;
 	}
@@ -1664,7 +1664,7 @@ ul.rating li span.fas {
 	.carousel-caption {
 		bottom: 8em;
 	}
-	.carousel-indicators {
+	.carousel-indicators {.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 		left: -56%;
 	}
 	.video a span.fas {
@@ -1716,9 +1716,9 @@ ul.rating li span.fas {
 	}
 	.collections h3 {
 		font-size: 35px;
-	}
-	.welcome_right {
-		margin: 0 50px;
+	}.navbar-light .navbar-brand, .navbar-light .navbar-toggler
+	..navbar-light .navbar-brand, .navbar-light .navbar-toggler
+	.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 	}
 	.typo_grids h3 {
 		font-size: 20px;
@@ -1771,7 +1771,7 @@ ul.rating li span.fas {
 	}
 }
 @media(max-width: 414px){
-	.portfolio-area li {
+	.portfolio-area li {.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 		width: 172px;
 	}
 	h3.heading {
@@ -1827,13 +1827,13 @@ ul.rating li span.fas {
 		font-size: 35px;
 	}
 	.project h3 {
-		font-size: 21px;
+		font-size: 21px;.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 	}
-	.agileits_grid figure {
+	.agileits_grid figur.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 		height: 225px;
 	}
 	.collections h3 {
-		font-size: 30px;
+		font-size: 30px;.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 	}
 	.process-grids h3 {
 		font-size: 20px;
@@ -1971,3 +1971,21 @@ ul.rating li span.fas {
 }
 
 /*-- //Responsive Design --*/
+
+
+
+/* CUSTEM STYLE*/
+.text-justify{
+	text-align: justify;
+}
+.down-left{
+	position: absolute;
+	top: 260px;
+}
+.link-mas{
+	color:#459034 !important;
+}
+
+.margin-p {
+	margin: 0 2rem;
+}
