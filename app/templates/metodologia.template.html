@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="col-md-12">
+<div class="col-md-12" ng-controller="MetodologiaCtrl">
     <div class="mt-5 information">
         <div class="row">
             <div class="col-xs-11">
@@ -39,9 +39,43 @@
             </div>
             <div class="col-sm-10">
                 <h4 class="text-uppercase mb-4">Principales suelos CMPC</h4>
-                <p class="mb-3 text-justify">
-                    TABLA!
-                </p>
+                  <table>
+                    <col>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <colgroup span="1"></colgroup>
+                    <tr>
+                      <td rowspan="2">Suelo</td>
+                      <td rowspan="2">ph</td>
+                      <th colspan="1" scope="colgroup">Condutividad eléctrica</th>
+                      <th>Suma de bases</th>
+                      <th>Capacidad de intercambio catiónico</th>
+                      <th>Materia orgánica</th>
+                      <th>Arena</th>
+                      <th>Arcilla</th>
+                      <th>Limo</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">us cm-1</th>
+                      <th scope="col" colspan="2">meq 100 g</th>
+                      <th scope="col" colspan="4">(%)</th>
+                    </tr>
+                    <tr ng-repeat="suelo in jsonTableSuelos">
+                      <th scope="row">{{suelo.suelo}}</th>
+                      <td>{{suelo.ph}}</td>
+                      <td>{{suelo.conductividad_electrica}}</td>
+                      <td>{{suelo.suma_bases}}</td>
+                      <td>{{suelo.capacidad_intercambio}}</td>
+                      <td>{{suelo.materia_organica}}</td>
+                      <td>{{suelo.arena}}</td>
+                      <td>{{suelo.arcilla}}</td>
+                      <td>{{suelo.limo}}</td>
+                    </tr>
+                  </table>
             </div>
         </div>
         <div class="row">
@@ -55,6 +89,197 @@
                     adsorción y porcentaje de desroción de los herbicidas que actualmente están siendo utilizados en los programas
                     de manejo de malezas de la empresa CMPC.
                 </p>
+
+                <table>
+                    <tr>
+                      <th rowspan="3">Herbicidas</th>
+                      <th rowspan="2">Dosis *</th>
+                      <th colspan="11">Propiedades físico-química **</th>
+                      <th rowspan="3">Riesgo cáncer</th>
+                      <th rowspan="3">Disruptor endocrino</th>
+                    </tr>
+                    <tr>
+                      <td>Peso molecular</td>
+                      <td>Solubilidad agua</td>
+                      <td>Coeficiento LogKow</td>
+                      <td>Densidad</td>
+                      <td>Presion de valor</td>
+                      <td>Coeficiente de henry</td>
+                      <td>DT Agua</td>
+                      <td>DT Sedimento</td>
+                      <td>DT Suelo</td>
+                      <td>Kd</td>
+                      <td>Koc</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>()</td>
+                      <td colspan="3">(Días)</td>
+                      <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                      <td>Simazina</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Terbutilazina</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Hexazinona</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Metsulfuronmetil</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Tricolpir</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Glifosato</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Indaziflan</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Flazasulfuron</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Fluroxipir</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+
+
+
+
             </div>
         </div>
         <div class="row">

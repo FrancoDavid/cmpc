@@ -9,6 +9,8 @@ angular.module('app-cmpc')
             console.log($scope.data);
         });
         */
+
+        console.log('MainCOntroller');
         var vm = $scope;
 
         vm.toHome = function(){
@@ -39,6 +41,8 @@ angular.module('app-cmpc')
                 return false;
             }
         };
+
+
 
     }   
 ]);
