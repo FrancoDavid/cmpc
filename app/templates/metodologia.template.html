@@ -6,6 +6,8 @@
         background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/proyecto.jpg) no-repeat;
         background-size: cover;
     }
+
+    
     
 </style>
 
@@ -39,43 +41,46 @@
             </div>
             <div class="col-sm-10">
                 <h4 class="text-uppercase mb-4">Principales suelos CMPC</h4>
-                  <table>
-                    <col>
-                    <colgroup span="1"></colgroup>
-                    <colgroup span="1"></colgroup>
-                    <colgroup span="1"></colgroup>
-                    <colgroup span="1"></colgroup>
-                    <colgroup span="1"></colgroup>
-                    <colgroup span="1"></colgroup>
-                    <colgroup span="1"></colgroup>
-                    <tr>
-                      <td rowspan="2">Suelo</td>
-                      <td rowspan="2">ph</td>
-                      <th colspan="1" scope="colgroup">Condutividad eléctrica</th>
-                      <th>Suma de bases</th>
-                      <th>Capacidad de intercambio catiónico</th>
-                      <th>Materia orgánica</th>
-                      <th>Arena</th>
-                      <th>Arcilla</th>
-                      <th>Limo</th>
-                    </tr>
-                    <tr>
-                      <th scope="col">us cm-1</th>
-                      <th scope="col" colspan="2">meq 100 g</th>
-                      <th scope="col" colspan="4">(%)</th>
-                    </tr>
-                    <tr ng-repeat="suelo in jsonTableSuelos">
-                      <th scope="row">{{suelo.suelo}}</th>
-                      <td>{{suelo.ph}}</td>
-                      <td>{{suelo.conductividad_electrica}}</td>
-                      <td>{{suelo.suma_bases}}</td>
-                      <td>{{suelo.capacidad_intercambio}}</td>
-                      <td>{{suelo.materia_organica}}</td>
-                      <td>{{suelo.arena}}</td>
-                      <td>{{suelo.arcilla}}</td>
-                      <td>{{suelo.limo}}</td>
-                    </tr>
-                  </table>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <col>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <tr>
+                          <td rowspan="2">Suelo</td>
+                          <td rowspan="2">ph</td>
+                          <th colspan="1" scope="colgroup">Condutividad eléctrica</th>
+                          <th>Suma de bases</th>
+                          <th>Capacidad de intercambio catiónico</th>
+                          <th>Materia orgánica</th>
+                          <th>Arena</th>
+                          <th>Arcilla</th>
+                          <th>Limo</th>
+                        </tr>
+                        <tr>
+                          <th scope="col">us cm-1</th>
+                          <th scope="col" colspan="2">meq 100 g</th>
+                          <th scope="col" colspan="4">(%)</th>
+                        </tr>
+                        <tr ng-repeat="suelo in jsonTableSuelos">
+                          <th scope="row">{{suelo.suelo}}</th>
+                          <td>{{suelo.ph}}</td>
+                          <td>{{suelo.conductividad_electrica}}</td>
+                          <td>{{suelo.suma_bases}}</td>
+                          <td>{{suelo.capacidad_intercambio}}</td>
+                          <td>{{suelo.materia_organica}}</td>
+                          <td>{{suelo.arena}}</td>
+                          <td>{{suelo.arcilla}}</td>
+                          <td>{{suelo.limo}}</td>
+                        </tr>
+                      </table>
+                </div>
+                  
             </div>
         </div>
         <div class="row">
@@ -89,8 +94,8 @@
                     adsorción y porcentaje de desroción de los herbicidas que actualmente están siendo utilizados en los programas
                     de manejo de malezas de la empresa CMPC.
                 </p>
-
-                <table>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
                     <tr>
                       <th rowspan="3">Herbicidas</th>
                       <th rowspan="2">Dosis *</th>
@@ -122,8 +127,8 @@
                       <td colspan="3">(Días)</td>
                       <td colspan="2"></td>
                     </tr>
-                    <tr>
-                      <td>Simazina</td>
+                    <tr ng-repeat = "herbicidas in jsonTableHerbicida">
+                      <td>{{herbicidas.herbicida}}</td>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -139,147 +144,8 @@
                       <td></td>
                       <td></td>
                     </tr>
-                    <tr>
-                      <td>Terbutilazina</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Hexazinona</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Metsulfuronmetil</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Tricolpir</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Glifosato</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Indaziflan</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Flazasulfuron</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>Fluroxipir</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </table>
-
-
-
-
+                    </table>
+                </div>
             </div>
         </div>
         <div class="row">

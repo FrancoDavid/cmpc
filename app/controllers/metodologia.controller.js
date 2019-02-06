@@ -3,7 +3,6 @@ angular.module('app-cmpc')
     .controller("MetodologiaCtrl", ["$scope", '$location', function($scope, $location) {
         console.log('Metodo CTRL');
         //Tabla 1 Suelos
-
         $scope.jsonTableSuelos = [
             {
                 suelo  : 'Trumao',
@@ -63,6 +62,37 @@ angular.module('app-cmpc')
 
         ];
 
+
+        //Tabla 2 Herbicida
+        $scope.jsonTableHerbicida = [
+            {
+                herbicida:  'Simazina'
+            },
+            {
+                herbicida:  'Terbutilazina'
+            },
+            {
+                herbicida:  'Hexazinona'
+            },
+            {
+                herbicida:  'Metsulfuronmetil'
+            },
+            {
+                herbicida:  'Tricolpir'
+            },
+            {
+                herbicida:  'Glifosato'
+            },
+            {
+                herbicida:  'Indaziflan'
+            },
+            {
+                herbicida:  'Flazasulfuron'
+            },
+            {
+                herbicida:  'Fluroxipir'
+            }
+        ];
 
 
     }   

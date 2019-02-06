@@ -399,10 +399,11 @@ h4.sub-tittle_w3ls {
 	
 }
 .process-grids p {
-    font-size: 15px;
+    /*font-size: 15px;*/
     letter-spacing: 1px;
-    color: #888;
+    /* color: #888; */
     line-height: 28px;
+    font-weight: 600;
 }
 .process-grids li {
     font-size: 16px;
@@ -647,7 +648,7 @@ a.w3_agile_vimeo:hover{
 }
 h3.heading {
     font-size: 45px;
-    font-weight: 200;
+    font-weight: 600;
     letter-spacing: 2px;
     color: #1b1b1b;
 }
@@ -881,7 +882,7 @@ ul.portfolio-area li figure {
 .information h4:after {
     position: absolute;
     content: "";
-    background: #96c438;
+    /* background: #96c438; */
     height: 2px;
     width: 15%;
     bottom: -35%;
@@ -1988,4 +1989,7 @@ ul.rating li span.fas {
 
 .margin-p {
 	margin: 0 2rem;
+}
+.parrafos{
+	color: #696C70;
 }
