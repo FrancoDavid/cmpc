@@ -7,6 +7,24 @@
         background-size: cover;
     }
 
+    .table-border-green th, .table-border-green td {
+        border: 1px solid #46943C !important;
+        text-align:center
+    }
+    .tr-green-1{
+        background-color:#6AA663;
+    }
+    .tr-green-2{
+        background-color:#7BC372;
+    }
+    .center-tr{
+        padding-top: 4rem !important;
+    }
+    .td-green{
+        background-color:#94E08B;
+    }
+
+
     
     
 </style>
@@ -42,7 +60,7 @@
             <div class="col-sm-10">
                 <h4 class="text-uppercase mb-4">Principales suelos CMPC</h4>
                 <div class="table-responsive">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-border-green">
                         <col>
                         <colgroup span="1"></colgroup>
                         <colgroup span="1"></colgroup>
@@ -51,9 +69,9 @@
                         <colgroup span="1"></colgroup>
                         <colgroup span="1"></colgroup>
                         <colgroup span="1"></colgroup>
-                        <tr>
-                          <td rowspan="2">Suelo</td>
-                          <td rowspan="2">ph</td>
+                        <tr class="tr-green-1">
+                          <td rowspan="2" class="center-tr"><b>Suelo</b></td>
+                          <td rowspan="2" class="center-tr"><b>ph</b></td>
                           <th colspan="1" scope="colgroup">Condutividad eléctrica</th>
                           <th>Suma de bases</th>
                           <th>Capacidad de intercambio catiónico</th>
@@ -62,21 +80,21 @@
                           <th>Arcilla</th>
                           <th>Limo</th>
                         </tr>
-                        <tr>
+                        <tr class="tr-green-2">
                           <th scope="col">us cm-1</th>
                           <th scope="col" colspan="2">meq 100 g</th>
                           <th scope="col" colspan="4">(%)</th>
                         </tr>
                         <tr ng-repeat="suelo in jsonTableSuelos">
-                          <th scope="row">{{suelo.suelo}}</th>
-                          <td>{{suelo.ph}}</td>
-                          <td>{{suelo.conductividad_electrica}}</td>
-                          <td>{{suelo.suma_bases}}</td>
-                          <td>{{suelo.capacidad_intercambio}}</td>
-                          <td>{{suelo.materia_organica}}</td>
-                          <td>{{suelo.arena}}</td>
-                          <td>{{suelo.arcilla}}</td>
-                          <td>{{suelo.limo}}</td>
+                          <th scope="row" class="tr-green-1">{{suelo.suelo}}</th>
+                          <td class="td-green">{{suelo.ph}}</td>
+                          <td class="td-green">{{suelo.conductividad_electrica}}</td>
+                          <td class="td-green">{{suelo.suma_bases}}</td>
+                          <td class="td-green">{{suelo.capacidad_intercambio}}</td>
+                          <td class="td-green">{{suelo.materia_organica}}</td>
+                          <td class="td-green">{{suelo.arena}}</td>
+                          <td class="td-green">{{suelo.arcilla}}</td>
+                          <td class="td-green">{{suelo.limo}}</td>
                         </tr>
                       </table>
                 </div>
@@ -95,15 +113,15 @@
                     de manejo de malezas de la empresa CMPC.
                 </p>
                 <div class="table-responsive">
-                    <table class="table table-bordered">
-                    <tr>
-                      <th rowspan="3">Herbicidas</th>
-                      <th rowspan="2">Dosis *</th>
+                    <table class="table table-bordered table-border-green">
+                    <tr class="tr-green-1">
+                      <th rowspan="3" class="center-tr">Herbicidas</th>
+                      <th rowspan="2" class="center-tr">Dosis *</th>
                       <th colspan="11">Propiedades físico-química **</th>
                       <th rowspan="3">Riesgo cáncer</th>
                       <th rowspan="3">Disruptor endocrino</th>
                     </tr>
-                    <tr>
+                    <tr class="tr-green-2">
                       <td>Peso molecular</td>
                       <td>Solubilidad agua</td>
                       <td>Coeficiento LogKow</td>
@@ -116,7 +134,7 @@
                       <td>Kd</td>
                       <td>Koc</td>
                     </tr>
-                    <tr>
+                    <tr class="td-green">
                       <td></td>
                       <td></td>
                       <td></td>
@@ -128,21 +146,21 @@
                       <td colspan="2"></td>
                     </tr>
                     <tr ng-repeat = "herbicidas in jsonTableHerbicida">
-                      <td>{{herbicidas.herbicida}}</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
                     </tr>
                     </table>
                 </div>

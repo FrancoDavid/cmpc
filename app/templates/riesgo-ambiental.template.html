@@ -6,6 +6,22 @@
         background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/pino4.jpg) no-repeat;
         background-size: cover;
     }
+    .table-border-green th, .table-border-green td {
+        border: 1px solid #46943C !important;
+        text-align:center
+    }
+    .tr-green-1{
+        background-color:#6AA663;
+    }
+    .tr-green-2{
+        background-color:#7BC372;
+    }
+    .center-tr{
+        padding-top: 4rem !important;
+    }
+    .td-green{
+        background-color:#94E08B;
+    }
 </style>
 
 <div class="banner">
@@ -40,19 +56,19 @@
                 <h4 class="text-uppercase mb-4">Coeficientes de adsorción (Kd) y porcentaje de desorción de los
                         herbicidas en cada uno de los principales cinco suelos forestales de CMPC</h4>
                         <div class="table-responsive">
-                            <table class="table table-bordered">
-                            <tr>
-                              <th rowspan="3">Herbicida</th>
+                          <table class="table table-bordered table-border-green">
+                            <tr class="tr-green-1">
+                              <th rowspan="3" class="center-tr">Herbicida</th>
                               <th colspan="10">Suelos</th>
                             </tr>
-                            <tr>
+                            <tr class="tr-green-2">
                               <td colspan="2">Trumao<br>(Rucamanqui)</td>
                               <td colspan="2">Rojo Arcilloso<br>(San Juan)</td>
                               <td colspan="2">Granítico<br>(San Antonio)</td>
                               <td colspan="2">Arenoso<br>(Las Islas)</td>
                               <td colspan="2">Metamórfico<br>(Escuadrón)</td>
                             </tr>
-                            <tr>
+                            <tr class="td-green">
                               <td>Kd*</td>
                               <td>%</td>
                               <td>Kd*</td>
@@ -65,17 +81,17 @@
                               <td>%</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaKD">
-                              <td>{{herbicidas.herbicida}}</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
                             </tr>
                           </table>
                         </div>
@@ -89,19 +105,19 @@
                 <h4 class="text-uppercase mb-4">Tasa de disipación (K) de los herbicidas en cada uno de los principales
                         cinco suelos forstales de CMPC</h4>
                         <div class="table-responsive">
-                            <table class="table table-bordered">
-                            <tr>
-                              <th rowspan="3">Herbicida</th>
+                            <table class="table table-bordered table-border-green">
+                            <tr class="tr-green-1">
+                              <th rowspan="3" class="center-tr">Herbicida</th>
                               <th colspan="15">Suelos</th>
                             </tr>
-                            <tr>
+                            <tr class="tr-green-2">
                               <td colspan="3">Trumao<br>(Rucamanqui)</td>
                               <td colspan="3">Rojo arcilloso<br>(San Juan )</td>
                               <td colspan="3">Granítico<br>(San Antonio)</td>
                               <td colspan="3">Arenoso<br>(Las Islas)</td>
                               <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
                             </tr>
-                            <tr>
+                            <tr class="td-green">
                               <td>k*</td>
                               <td>TD50**</td>
                               <td>TD90**</td>
@@ -119,22 +135,22 @@
                               <td>TD90**</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaK">
-                              <td>{{herbicidas.herbicida}}</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
                             </tr>
                             </table>
                         </div>
@@ -152,56 +168,55 @@
                         el mismo herbicida en diferentes suelos.</p>
 
                         <div class="table-responsive">
-                    <table class="table table-bordered">
-                            <tr>
-                              <th rowspan="3">Herbicida</th>
-                              <th colspan="15">Suelos</th>
-                            </tr>
-                            <tr>
-                              <td colspan="3">Trumao<br>(Rucamanqui)</td>
-                              <td colspan="3">Rojo arcilloso<br>(San Juan )</td>
-                              <td colspan="3">Granítico<br>(San Antonio)</td>
-                              <td colspan="3">Arenoso<br>(Las Islas)</td>
-                              <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
-                            </tr>
-                            <tr>
-                              <td>Briggs Rf</td>
-                              <td>Hamaker Rf</td>
-                              <td>GUS</td>
-                              <td>Briggs Rf</td>
-                              <td>Hamaker Rf</td>
-                              <td>GUS</td>
-                              <td>Briggs Rf</td>
-                              <td>Hamaker Rf</td>
-                              <td>GUS</td>
-                              <td>Briggs Rf</td>
-                              <td>Hamaker Rf</td>
-                              <td>GUS</td>
-                              <td>Briggs Rf</td>
-                              <td>Hamaker Rf</td>
-                              <td>GUS</td>
-                              
-                            </tr>
-                            <tr ng-repeat="herbicidas in jsonTableHerbicidaLixiviacion">
-                              <td>{{herbicidas.herbicida}}</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                            </tr>
-                        </table>
-                    </div>
+                            <table class="table table-bordered table-border-green">
+                                <tr class="tr-green-1">
+                                    <th rowspan="3" class="center-tr">Herbicida</th>
+                                    <th colspan="15">Suelos</th>
+                                </tr>
+                                <tr class="tr-green-2">
+                                    <td colspan="3">Trumao<br>(Rucamanqui)</td>
+                                    <td colspan="3">Rojo arcilloso<br>(San Juan )</td>
+                                    <td colspan="3">Granítico<br>(San Antonio)</td>
+                                    <td colspan="3">Arenoso<br>(Las Islas)</td>
+                                    <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
+                                </tr>
+                                <tr class="td-green">
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                </tr>
+                                <tr ng-repeat="herbicidas in jsonTableHerbicidaLixiviacion">
+                                    <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                </tr>
+                            </table>
+                        </div>
 
             </div>
         </div>
@@ -220,47 +235,47 @@
                         superficiales o cercanos a cuencas de importancia para aguas de uso humano.
                 </p>
                 <div class="table-responsive">
-                    <table class="table table-bordered">
-                    <tr>
-                      <th rowspan="4">Herbicida</th>
-                      <th colspan="10">Suelos</th>
-                    </tr>
-                    <tr>
-                      <td colspan="2">Trumao<br>(Rucamanqui)</td>
-                      <td colspan="2">Rojo arcilloso<br>(San Juan)</td>
-                      <td colspan="2">Granítico<br>(San Antonio)</td>
-                      <td colspan="2">Arenoso<br>(San Antonio)</td>
-                      <td colspan="2">Metamórfico<br>(Escuadron)</td>
-                    </tr>
-                    <tr>
-                      <td>Lixiviado<br>Bajo 15cm</td>
-                      <td>Lixiviado<br>Bajo 90cm</td>
-                      <td>Lixiviado<br>Bajo 15cm</td>
-                      <td>Lixiviado<br>Bajo 90cm</td>
-                      <td>Lixiviado<br>Bajo 15cm</td>
-                      <td>Lixiviado<br>Bajo 90cm</td>
-                      <td>Lixiviado<br>Bajo 15cm</td>
-                      <td>Lixiviado<br>Bajo 90cm</td>
-                      <td>Lixiviado<br>Bajo 15cm</td>
-                      <td>Lixiviado<br>Bajo 90cm</td>
-                    </tr>
-                    <tr>
-                      <td colspan="10">%</td>
-                    </tr>
-                    <tr ng-repeat="herbicidas in jsonTableHerbicidaLisimetros">
-                      <td>{{herbicidas.herbicida}}</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </table>
+                    <table class="table table-bordered table-border-green">
+                        <tr class="tr-green-1">
+                            <th rowspan="4" class="center-tr">Herbicida</th>
+                            <th colspan="10">Suelos</th>
+                        </tr>
+                        <tr class="tr-green-2">
+                            <td colspan="2">Trumao<br>(Rucamanqui)</td>
+                            <td colspan="2">Rojo arcilloso<br>(San Juan)</td>
+                            <td colspan="2">Granítico<br>(San Antonio)</td>
+                            <td colspan="2">Arenoso<br>(San Antonio)</td>
+                            <td colspan="2">Metamórfico<br>(Escuadron)</td>
+                        </tr>
+                        <tr class="td-green">
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                        </tr>
+                        <tr class="td-green">
+                            <td colspan="10">%</td>
+                        </tr>
+                        <tr ng-repeat="herbicidas in jsonTableHerbicidaLisimetros">
+                            <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -282,43 +297,43 @@
 
                 <div class="col-sm-10">
                     <div class="table-responsive">
-                        <table class="table table-bordered">
-                        <tr>
-                          <th rowspan="3">Herbicida</th>
-                          <th colspan="10">Suelos</th>
-                        </tr>
-                        <tr>
-                          <td colspan="2">Trumao<br>(Rucamanqui)</td>
-                          <td colspan="2">Rojo arcilloso<br>(San Juan)</td>
-                          <td colspan="2">Granítico<br>(San Antonio)</td>
-                          <td colspan="2">Arenoso<br>(San Antonio)</td>
-                          <td colspan="2">Metamórfico<br>(Escuadron)</td>
-                        </tr>
-                        <tr>
-                          <td>IRA*</td>
-                          <td>IRA carga*</td>
-                          <td>IRA*<br></td>
-                          <td>IRA carga*</td>
-                          <td>IRA*<br></td>
-                          <td>IRA carga*</td>
-                          <td>IRA*</td>
-                          <td>IRA carga*</td>
-                          <td>IRA*</td>
-                          <td>IRA carga*</td>
-                        </tr>
-                        <tr ng-repeat="herbicidas in jsonTableHerbicidaIRA">
-                          <td>{{herbicidas.herbicida}}</td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
+                        <table class="table table-bordered table-border-green">
+                            <tr class="tr-green-1">
+                                <th rowspan="3" class="center-tr">Herbicida</th>
+                                <th colspan="10">Suelos</th>
+                            </tr>
+                            <tr class="tr-green-2">
+                                <td colspan="2">Trumao<br>(Rucamanqui)</td>
+                                <td colspan="2">Rojo arcilloso<br>(San Juan)</td>
+                                <td colspan="2">Granítico<br>(San Antonio)</td>
+                                <td colspan="2">Arenoso<br>(San Antonio)</td>
+                                <td colspan="2">Metamórfico<br>(Escuadron)</td>
+                            </tr>
+                            <tr class="td-green">
+                                <td>IRA*</td>
+                                <td>IRA carga*</td>
+                                <td>IRA*<br></td>
+                                <td>IRA carga*</td>
+                                <td>IRA*<br></td>
+                                <td>IRA carga*</td>
+                                <td>IRA*</td>
+                                <td>IRA carga*</td>
+                                <td>IRA*</td>
+                                <td>IRA carga*</td>
+                            </tr>
+                            <tr ng-repeat="herbicidas in jsonTableHerbicidaIRA">
+                                <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                                <td class="td-green"></td>
+                            </tr>
                       </table>
                 
                     </div>

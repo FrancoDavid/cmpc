@@ -9,8 +9,11 @@ body{
 	margin:0;
 	background:#fff;
 	position:relative;
-	font-family: 'Raleway', sans-serif;
+	/* font-family: 'Raleway', sans-serif; */ 
+	font-family: 'Lato', sans-serif;
 }
+
+
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
