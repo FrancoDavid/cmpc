@@ -1,0 +1,119 @@
+<style>
+    .footer-cmpc{
+        background-color: white;
+        background-image: -webkit-linear-gradient(150deg, white 51%, #459034 35%);
+        min-height: 230px;
+        border: 1px solid #459034;
+        margin-top: 5rem;
+    }
+    .footer-logo-cmpc {
+        position: relative;
+        width: 45%;
+        left: 104px;
+        top: 2px;
+    }
+    .footer-logo-sigal{
+        position: relative;
+        width: 41%;
+        left: 132px;
+        top: 10px;
+    }
+
+    .footer-div{
+        min-height: 150px;
+        background: white;
+        position: relative;
+        width: calc(50% - 30px);
+        /* border: 1px solid #459034; */
+        margin-top: 5rem;
+    }
+    .div1 {
+        float: left;
+        background-color: #459034;
+        border-right: 1px solid #459034;
+    }
+    .div2 {
+        float: right;
+    }
+    .div1:after, .div2:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+    }
+    .div1:after {
+        left: 100%;
+        border-top: 150px solid #459034;
+        border-right: 50px solid transparent;
+    }
+    .div2:before {
+        right: 100%;
+        border-bottom: 150px solid white;
+        border-left: 50px solid transparent;
+    }
+
+    /* Smartphones (portrait & landscape) */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        .footer-div {
+            min-height: 60px;
+        }
+        .footer-logo-cmpc {
+            position: relative;
+            width: 59%;
+            left: 39px;
+            top: 2px;
+        }
+        .footer-logo-sigal {
+            position: relative;
+            width: 47%;
+            left: 20px;
+            top: 10px;
+        }
+        .div1:after {
+            left: 100%;
+            border-top: 60px solid #459034;
+            border-right: 50px solid transparent;
+        }
+        .div2:before {
+            right: 100%;
+            border-bottom: 60px solid white;
+            border-left: 50px solid transparent;
+        }
+    }
+    
+    /* Smartphones (landscape) */
+    @media only screen and (min-width : 321px) {
+    
+    }
+    
+    /* Smartphones (portrait) */
+    @media only screen and (max-width : 320px) {
+    
+    }
+    
+    /* iPads (portrait & landscape) */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    
+    }
+    
+    /* iPads (landscape) */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    
+    }
+    
+    /* iPads (portrait) */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+    }
+
+</style>
+
+    <div class="footer-div div1 col-xs-6">
+            <img class="img-responsive footer-logo-cmpc" src="./assets/images/cmpc_images/footer-cmpc-logo.png" alt="CMPC">
+    </div>
+    <div class="footer-div div2 col-xs-6">
+            <img class="img-responsive footer-logo-sigal" src="./assets/images/cmpc_images/logo-sidal.png" alt="SIGAL">
+    </div>
+
+

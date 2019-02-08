@@ -1,0 +1,187 @@
+<style>
+    .carousel-item {
+        background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/proyecto.jpg) no-repeat;
+        background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/proyecto.jpg) no-repeat;
+        background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/proyecto.jpg) no-repeat;
+        background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/proyecto.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .table-border-green th, .table-border-green td {
+        border: 1px solid #46943C !important;
+        text-align:center
+    }
+    .tr-green-1{
+        background-color:#6AA663;
+    }
+    .tr-green-2{
+        background-color:#7BC372;
+    }
+    .center-tr{
+        padding-top: 4rem !important;
+    }
+    .td-green{
+        background-color:#94E08B;
+    }
+
+</style>
+
+<div class="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="height: 442px;">
+                <div class="carousel-caption down-left">
+                    <h3>Metodología</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" ng-controller="MetodologiaCtrl">
+    <div class="mt-5 information">
+        <div class="row">
+            <div class="col-xs-11">
+                <p class="mb-3 text-justify margin-p parrafos">
+                    El área de producción forestal de CMPC se extiende desde la Región del Maule (Lat; long) hasta la Región
+                    de los Lagos (Lat; long), teniendo las más variadas condiciones de clima y suelo. Sin embargo, más del
+                    80% de su operaciones de producción de madera se enfoca en cinco tipos de suelo, con características
+                    muy particulares, y son los que se seleccionaron para los estudios en condiciones Controladas.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+            </div>
+            <div class="col-sm-10">
+                <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i> Principales suelos CMPC</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-border-green">
+                        <col>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <colgroup span="1"></colgroup>
+                        <tr class="tr-green-1">
+                          <td rowspan="2" class="center-tr"><b>Suelo</b></td>
+                          <td rowspan="2" class="center-tr"><b>ph</b></td>
+                          <th colspan="1" scope="colgroup">Condutividad eléctrica</th>
+                          <th>Suma de bases</th>
+                          <th>Capacidad de intercambio catiónico</th>
+                          <th>Materia orgánica</th>
+                          <th>Arena</th>
+                          <th>Arcilla</th>
+                          <th>Limo</th>
+                        </tr>
+                        <tr class="tr-green-2">
+                          <th scope="col">us cm-1</th>
+                          <th scope="col" colspan="2">meq 100 g</th>
+                          <th scope="col" colspan="4">(%)</th>
+                        </tr>
+                        <tr ng-repeat="suelo in jsonTableSuelos">
+                          <th scope="row" class="tr-green-1">{{suelo.suelo}}</th>
+                          <td class="td-green">{{suelo.ph}}</td>
+                          <td class="td-green">{{suelo.conductividad_electrica}}</td>
+                          <td class="td-green">{{suelo.suma_bases}}</td>
+                          <td class="td-green">{{suelo.capacidad_intercambio}}</td>
+                          <td class="td-green">{{suelo.materia_organica}}</td>
+                          <td class="td-green">{{suelo.arena}}</td>
+                          <td class="td-green">{{suelo.arcilla}}</td>
+                          <td class="td-green">{{suelo.limo}}</td>
+                        </tr>
+                      </table>
+                </div>
+                  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+            </div>
+            <div class="col-sm-10">
+                <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i> Estudios en condiciones controladas</h4>
+                <p class="mb-3 text-justify parrafos">
+                    Con cada uno de los suelos se realizaron estudios de laboratorio destinados a determinar los coeficientes de
+                    adsorción y porcentaje de desroción de los herbicidas que actualmente están siendo utilizados en los programas
+                    de manejo de malezas de la empresa CMPC.
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-border-green">
+                    <tr class="tr-green-1">
+                      <th rowspan="3" class="center-tr">Herbicidas</th>
+                      <th rowspan="2" class="center-tr">Dosis *</th>
+                      <th colspan="11">Propiedades físico-química **</th>
+                      <th rowspan="3">Riesgo cáncer</th>
+                      <th rowspan="3">Disruptor endocrino</th>
+                    </tr>
+                    <tr class="tr-green-2">
+                      <td>Peso molecular</td>
+                      <td>Solubilidad agua</td>
+                      <td>Coeficiento LogKow</td>
+                      <td>Densidad</td>
+                      <td>Presion de valor</td>
+                      <td>Coeficiente de henry</td>
+                      <td>DT Agua</td>
+                      <td>DT Sedimento</td>
+                      <td>DT Suelo</td>
+                      <td>Kd</td>
+                      <td>Koc</td>
+                    </tr>
+                    <tr class="td-green">
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td>()</td>
+                      <td colspan="3">(Días)</td>
+                      <td colspan="2"></td>
+                    </tr>
+                    <tr ng-repeat = "herbicidas in jsonTableHerbicida">
+                      <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                      <td class="td-green"></td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-11">
+                <p class="mb-3 text-justify margin-p parrafos mt-5">
+                    Además de los coeficientes de adsorción, se determinó la degradación de los herbicidas en los diferentes suelos,
+                    utilizando condiciones controladas (cámara de crecimiento), y así tener un valor referencial en suelos Chilenos,
+                    información inexistente para muchos de ellos.
+                </p>
+                <p class="mb-3 text-justify margin-p parrafos">
+                    Como tercera fase de estos estudios, se armaron columnas de suelo (Lisímetros) con los cuales se buscó
+                    determinar el grado de lixiviación de los herbicidas en cada uno de los suelos.
+                </p> 
+                <p class="mb-3 text-justify margin-p parrafos">
+                    Toda esta información fue utilizada para la estimación del Riesgo Ambiental de los herbicidas, y así definir las
+                    áreas de producción (suelo-ambiente) de mayor riesgo potencial, en donde se establecieron las unidades de
+                    monitoreo sistemático y permanente de las aguas y suelos.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

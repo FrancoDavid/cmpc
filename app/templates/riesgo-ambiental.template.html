@@ -1,0 +1,344 @@
+<style>
+    .carousel-item {
+        background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/pino4.jpg) no-repeat;
+        background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/pino4.jpg) no-repeat;
+        background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/pino4.jpg) no-repeat;
+        background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/pino4.jpg) no-repeat;
+        background-size: cover;
+    }
+    .table-border-green th, .table-border-green td {
+        border: 1px solid #46943C !important;
+        text-align:center
+    }
+    .tr-green-1{
+        background-color:#6AA663;
+    }
+    .tr-green-2{
+        background-color:#7BC372;
+    }
+    .center-tr{
+        padding-top: 4rem !important;
+    }
+    .td-green{
+        background-color:#94E08B;
+    }
+</style>
+
+<div class="banner">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="height: 442px;">
+                <div class="carousel-caption down-left">
+                    <h3>Riesgo Ambiental</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" ng-controller="RiesgoAmbientalCtrl">
+    <div class="mt-5 information">
+        <div class="row">
+            <div class="col-xs-11">
+                <p class="mb-3 text-justify margin-p parrafos">
+                    Para cada uno de los herbicidas actualmente en uso en los programas de control de malezas, se
+                    determinaron sus coeficientes de adsorción (Kd) y desorción (%) en los cinco suelos de
+                    producción forestal CMPC, así como sus tasas de degradación (k), vida media (TD50) y
+                    degradación del 90% de los residuos (TD90).
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+                
+            </div>
+            <div class="col-sm-10">
+                <h4 class="text-uppercase mb-4"><i class="fas fa-angle-down arrow-f"></i>Coeficientes de adsorción (Kd) y porcentaje de desorción de los
+                        herbicidas en cada uno de los principales cinco suelos forestales de CMPC</h4>
+                        <div class="table-responsive">
+                          <table class="table table-bordered table-border-green">
+                            <tr class="tr-green-1">
+                              <th rowspan="3" class="center-tr">Herbicida</th>
+                              <th colspan="10">Suelos</th>
+                            </tr>
+                            <tr class="tr-green-2">
+                              <td colspan="2">Trumao<br>(Rucamanqui)</td>
+                              <td colspan="2">Rojo Arcilloso<br>(San Juan)</td>
+                              <td colspan="2">Granítico<br>(San Antonio)</td>
+                              <td colspan="2">Arenoso<br>(Las Islas)</td>
+                              <td colspan="2">Metamórfico<br>(Escuadrón)</td>
+                            </tr>
+                            <tr class="td-green">
+                              <td>Kd*</td>
+                              <td>%</td>
+                              <td>Kd*</td>
+                              <td>%</td>
+                              <td>Kd*</td>
+                              <td>%</td>
+                              <td>Kd*</td>
+                              <td>%</td>
+                              <td>Kd*</td>
+                              <td>%</td>
+                            </tr>
+                            <tr ng-repeat="herbicidas in jsonTableHerbicidaKD">
+                              <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                            </tr>
+                          </table>
+                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+            </div>
+            <div class="col-sm-10">
+                <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Tasa de disipación (K) de los herbicidas en cada uno de los principales
+                        cinco suelos forstales de CMPC</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-border-green">
+                            <tr class="tr-green-1">
+                              <th rowspan="3" class="center-tr">Herbicida</th>
+                              <th colspan="15">Suelos</th>
+                            </tr>
+                            <tr class="tr-green-2">
+                              <td colspan="3">Trumao<br>(Rucamanqui)</td>
+                              <td colspan="3">Rojo arcilloso<br>(San Juan )</td>
+                              <td colspan="3">Granítico<br>(San Antonio)</td>
+                              <td colspan="3">Arenoso<br>(Las Islas)</td>
+                              <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
+                            </tr>
+                            <tr class="td-green">
+                              <td>k*</td>
+                              <td>TD50**</td>
+                              <td>TD90**</td>
+                              <td>k*</td>
+                              <td>TD50**</td>
+                              <td>TD90**</td>
+                              <td>k*</td>
+                              <td>TD50**</td>
+                              <td>TD90**</td>
+                              <td>k*</td>
+                              <td>TD50*</td>
+                              <td>TD90**</td>
+                              <td>k*</td>
+                              <td>TD50*</td>
+                              <td>TD90**</td>
+                            </tr>
+                            <tr ng-repeat="herbicidas in jsonTableHerbicidaK">
+                              <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                              <td class="td-green"></td>
+                            </tr>
+                            </table>
+                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+            </div>
+            <div class="col-sm-10">
+                <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Índices de lixiviación</h4>
+                <p class="mb-3 text-justify parrafos">
+                        Los coeficientes de adsorción y tasas de disipación permitieron estimar diferentes índices de lixiviación, los
+                        cuales permiten hacer una comparación del riesgo potencial de lixiviación de diferentes herbicidas en un suelo o
+                        el mismo herbicida en diferentes suelos.</p>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-border-green">
+                                <tr class="tr-green-1">
+                                    <th rowspan="3" class="center-tr">Herbicida</th>
+                                    <th colspan="15">Suelos</th>
+                                </tr>
+                                <tr class="tr-green-2">
+                                    <td colspan="3">Trumao<br>(Rucamanqui)</td>
+                                    <td colspan="3">Rojo arcilloso<br>(San Juan )</td>
+                                    <td colspan="3">Granítico<br>(San Antonio)</td>
+                                    <td colspan="3">Arenoso<br>(Las Islas)</td>
+                                    <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
+                                </tr>
+                                <tr class="td-green">
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                    <td>Briggs Rf</td>
+                                    <td>Hamaker Rf</td>
+                                    <td>GUS</td>
+                                </tr>
+                                <tr ng-repeat="herbicidas in jsonTableHerbicidaLixiviacion">
+                                    <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                    <td class="td-green"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+            </div>
+            <div class="col-sm-10">
+                <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Lisímetros</h4>
+                <p class="mb-3 text-justify parrafos">
+                        Los valores entregados por los índices de lixiviación fueron comparados con los resultados obtenidos en los
+                        estudios en lisímetros, relacionando el índice de lixiviación con la profundidad alcanzada por cada herbicida en
+                        cada uno de los suelos y con la masa del herbicida lixiviada bajo los 15 cm. Esto permitió validar los Índices
+                        como herramientas de análisis de riesgo para futuros herbicidas que sean incorporados a los programas de
+                        manejo de malezas, y así ir utilizando herbicidas de bajo riesgo de lixiviación en zonas con napas de aguas muy
+                        superficiales o cercanos a cuencas de importancia para aguas de uso humano.
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-border-green">
+                        <tr class="tr-green-1">
+                            <th rowspan="4" class="center-tr">Herbicida</th>
+                            <th colspan="10">Suelos</th>
+                        </tr>
+                        <tr class="tr-green-2">
+                            <td colspan="2">Trumao<br>(Rucamanqui)</td>
+                            <td colspan="2">Rojo arcilloso<br>(San Juan)</td>
+                            <td colspan="2">Granítico<br>(San Antonio)</td>
+                            <td colspan="2">Arenoso<br>(San Antonio)</td>
+                            <td colspan="2">Metamórfico<br>(Escuadron)</td>
+                        </tr>
+                        <tr class="td-green">
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                            <td>Lixiviado<br>Bajo 15cm</td>
+                            <td>Lixiviado<br>Bajo 90cm</td>
+                        </tr>
+                        <tr class="td-green">
+                            <td colspan="10">%</td>
+                        </tr>
+                        <tr ng-repeat="herbicidas in jsonTableHerbicidaLisimetros">
+                            <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-11">
+                <p class="mb-3 text-justify margin-p parrafos mt-5">
+                        Todos los resultados obtenidos en los estudios en condiciones controladas (Coeficientes de adsorción,
+                        degradación herbicidas en el suelo y columnas de lixiviación), junto a la información de las propiedades físico-
+                        químicas de los herbicidas y su información ecotoxicológica existente, permitieron realizar una estimación de
+                        Riesgo Ambiental, utilizando el Índice IRA (Alister y Kogan, 2005). Los resultados de este índice contrastados
+                        con los resultados provenientes de los monitoreos, dejándolo como Índice Predictivo valido para su uso en las
+                        condiciones productivas de CMPC.
+                </p>
+                <p class="mb-3 text-justify margin-p parrafos">
+                        Valores del Indicie de Riesgo Ambiental (IRA) estimado a partir de las determinaciones de coeficientes de
+                        adsorción y tasas de disipación para cada herbicida estudiado en los principales suelos forestales de CMPC.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
+            </div>
+            <div class="col-sm-10">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-border-green">
+                        <tr class="tr-green-1">
+                            <th rowspan="3" class="center-tr">Herbicida</th>
+                            <th colspan="10">Suelos</th>
+                        </tr>
+                        <tr class="tr-green-2">
+                            <td colspan="2">Trumao<br>(Rucamanqui)</td>
+                            <td colspan="2">Rojo arcilloso<br>(San Juan)</td>
+                            <td colspan="2">Granítico<br>(San Antonio)</td>
+                            <td colspan="2">Arenoso<br>(San Antonio)</td>
+                            <td colspan="2">Metamórfico<br>(Escuadron)</td>
+                        </tr>
+                        <tr class="td-green">
+                            <td>IRA*</td>
+                            <td>IRA carga*</td>
+                            <td>IRA*<br></td>
+                            <td>IRA carga*</td>
+                            <td>IRA*<br></td>
+                            <td>IRA carga*</td>
+                            <td>IRA*</td>
+                            <td>IRA carga*</td>
+                            <td>IRA*</td>
+                            <td>IRA carga*</td>
+                        </tr>
+                        <tr ng-repeat="herbicidas in jsonTableHerbicidaIRA">
+                            <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                            <td class="td-green"></td>
+                        </tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
