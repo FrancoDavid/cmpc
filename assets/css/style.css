@@ -1995,4 +1995,13 @@ ul.rating li span.fas {
 }
 .parrafos{
 	color: #696C70;
+	font-size: 20px !important;
+}
+.arrow-f{
+	font-size: 30px !important;
+	color: #96c438 !important;
+	padding-right: 1rem;
+} 
+.hand-pointer{
+	cursor: pointer;
 }

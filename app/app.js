@@ -25,7 +25,7 @@ var configApp = function($routeProvider){
         .otherwise({ reditrectTo : "/" });
 };
  
-var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage'])
+var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage','ngMap'])
 
 app.config(configApp)
 app.directive('navBar', NavBar);
