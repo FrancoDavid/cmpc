@@ -66,31 +66,149 @@ angular.module('app-cmpc')
         //Tabla 2 Herbicida
         $scope.jsonTableHerbicida = [
             {
-                herbicida:  'Simazina'
+                herbicida:  'Simazina',
+                dosis:  '',
+                peso_molecular: '201,66',
+                solubilidad_agua:'5,0',
+                coef_low_kow:'2,3',
+                pka:'1,62',
+                densidad:'1,3',
+                presion_valor:'8,1x10-7',
+                coef_henry:'5,6x10-5',
+                dt_50_agua:'46',
+                dt_50_suelo:'60',
+                koc:'130',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Terbutilazina'
+                herbicida:  'Terbutilazina',
+                dosis:  '',
+                peso_molecular: '229,77',
+                solubilidad_agua:'6,6',
+                coef_low_kow:'3,4',
+                pka:'1,9',
+                densidad:'1,19',
+                presion_valor:'1,5x10-4',
+                coef_henry:'2,3x10-3',
+                dt_50_agua:'6',
+                dt_50_suelo:'72',
+                koc:'354',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Hexazinona'
+                herbicida:  'Hexazinona',
+                dosis:  '',
+                peso_molecular: '252,31',
+                solubilidad_agua:'33.000',
+                coef_low_kow:'1,17',
+                pka:'2,2',
+                densidad:'1,25',
+                presion_valor:'3,0x10-5',
+                coef_henry:'1,1x10-7',
+                dt_50_agua:'56',
+                dt_50_suelo:'90',
+                koc:'605',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Metsulfuronmetil'
+                herbicida:  'Metsulfuronmetil',
+                dosis:  '',
+                peso_molecular: '301,36',
+                solubilidad_agua:'2.790',
+                coef_low_kow:'-1,87',
+                pka:'3,75',
+                densidad:'1,45',
+                presion_valor:'1,4x10-6',
+                coef_henry:'2.9x10-6',
+                dt_50_agua:'115',
+                dt_50_suelo:'28',
+                koc:'60',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Tricolpir'
+                herbicida:  'Tricolpir',
+                dosis:  '',
+                peso_molecular: '256,5',
+                solubilidad_agua:'8.100',
+                coef_low_kow:'4,62',
+                pka:'3,97',
+                densidad:'1,3',
+                presion_valor:'1,01x10-4',
+                coef_henry:'2,9x10-3',
+                dt_50_agua:'25',
+                dt_50_suelo:'30',
+                koc:'27',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Glifosato'
+                herbicida:  'Glifosato',
+                dosis:  '',
+                peso_molecular: '169,1',
+                solubilidad_agua:'10.500',
+                coef_low_kow:'-3,2',
+                pka:'2,34',
+                densidad:'1,71',
+                presion_valor:'1,3x10-6',
+                coef_henry:'2,1x10-7',
+                dt_50_agua:'10',
+                dt_50_suelo:'24',
+                koc:'1.424',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Indaziflan'
+                herbicida:  'Indaziflan',
+                dosis:  '',
+                peso_molecular: '301,36',
+                solubilidad_agua:'2,8',
+                coef_low_kow:'2,8',
+                pka:'3,5',
+                densidad:'1,23',
+                presion_valor:'2,551x10-8',
+                coef_henry:'2,7x10-6',
+                dt_50_agua:'3',
+                dt_50_suelo:'150',
+                koc:'1.000',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Flazasulfuron'
+                herbicida:  'Flazasulfuron',
+                dosis:  '',
+                peso_molecular: '407,37',
+                solubilidad_agua:'2.100',
+                coef_low_kow:'-0,06',
+                pka:'4,37',
+                densidad:'1,62',
+                presion_valor:'1,3x10-5',
+                coef_henry:'2,6x10-6',
+                dt_50_agua:'15',
+                dt_50_suelo:'18',
+                koc:'46',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
+                
             },
             {
-                herbicida:  'Fluroxipir'
+                herbicida:  'Fluroxipir',
+                dosis:  '',
+                peso_molecular: '205,03',
+                solubilidad_agua:'6.500',
+                coef_low_kow:'0,04',
+                pka:'2,94',
+                densidad:'1,04',
+                presion_valor:'3,8x10-10',
+                coef_henry:'1,7x10-10',
+                dt_50_agua:'11',
+                dt_50_suelo:'51',
+                koc:'60',
+                riesgo_cancer:'no probable',
+                disruptor_endocrino:'no'
             }
         ];
 
