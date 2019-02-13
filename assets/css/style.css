@@ -221,7 +221,7 @@ span.display {
 .carousel-caption h3 {
 	font-size: 4em;
     font-weight: 700;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
 }
 .carousel-caption h2 span, .carousel-caption h3 span {
@@ -385,7 +385,7 @@ h4.sub-tittle_w3ls {
     color: #009688;
 }
 .process-grids h3 {
-    font-size: 25px;
+    font-size: 19px;
     font-weight: 700;
     color: #171717;
     letter-spacing: 4px;
@@ -394,23 +394,22 @@ h4.sub-tittle_w3ls {
 .process-grids h3:after {
     position: absolute;
     content: "";
-	background: #96c438;
+	/* background: #96c438; */
     height: 3px;
     width: 15%;
     bottom: -40%;
     left: 0%;
-	
 }
 .process-grids p {
     /*font-size: 15px;*/
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     /* color: #888; */
-    line-height: 28px;
-    font-weight: 600;
+    line-height: 24px;
+    font-weight: 200;
 }
 .process-grids li {
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 14px;
+    letter-spacing: 0px;
     color: #222;
     list-style-type: none;
 }
@@ -650,7 +649,7 @@ a.w3_agile_vimeo:hover{
     font-size: 15px;
 }
 h3.heading {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     letter-spacing: 2px;
     color: #1b1b1b;
@@ -856,17 +855,17 @@ ul.portfolio-area li figure {
     height: 435px;
 }
 .information h4 {
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     color: #333;
     position: relative;
 }
 .information p {
-    font-size: 17px;
-    letter-spacing: 1px;
+    font-size: 15px;
+    letter-spacing: 0px;
     color: #222;
-    line-height: 28px;
+    line-height: 24px;
 }
 .information p a,.information p span{
     color: #009688;
@@ -1528,7 +1527,7 @@ ul.rating li span.fas {
 		max-width: 20%;
 	}
 	.process-grids h3 {
-		font-size: 22px;
+		font-size: 19px;
 		letter-spacing: 2px;
 	}
 	.process span.fab {
@@ -1570,10 +1569,16 @@ ul.rating li span.fas {
 	.navbar-toggler {
 		border-radius: 0;
 	}
+	.margin-table {
+		margin: 0px auto !important;
+	}
 }
 @media(max-width: 900px){
 	.portfolio-area li {
 		width: 192px;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 800px){
@@ -1592,6 +1597,9 @@ ul.rating li span.fas {
 	.carousel-indicators {
 		left: -60%;
 	}
+	.margin-table {
+		margin: 0px auto !important;
+	}
 }
 @media(max-width: 768px){
 	.portfolio-area li {
@@ -1606,6 +1614,9 @@ ul.rating li span.fas {
 	}
 	.carousel-item {
 		height: 33em;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 736px){.navbar-light .navbar-brand, .navbar-light .navbar-toggler
@@ -1635,10 +1646,16 @@ ul.rating li span.fas {
 	.typo_grids h3 {
 		font-size: 22px;
 	}
+	.margin-table {
+		margin: 0px auto !important;
+	}
 }
 @media(max-width: 684px){
 	.portfolio-area li {
 		width: 191px;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 667px){
@@ -1675,6 +1692,9 @@ ul.rating li span.fas {
 		font-size: 50px;
 		margin-top: 0.5em;
 	}
+	.margin-table {
+		margin: 0px auto;
+	}
 }
 @media(max-width: 640px){
 	.portfolio-area li {
@@ -1682,6 +1702,9 @@ ul.rating li span.fas {
 	}
 	.carousel-caption h2, .carousel-caption h3 {
 		font-size: 2.2em;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 600px){
@@ -1702,6 +1725,9 @@ ul.rating li span.fas {
 	}
 	.carousel-indicators {
 		left: -50%;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 568px){
@@ -1730,6 +1756,9 @@ ul.rating li span.fas {
 	.typo_grids h2 {
 		font-size: 25px;
 	}	
+	.margin-table {
+		margin: 0px auto !important;
+	}
 }
 @media(max-width: 480px){
 	.portfolio-area li {
@@ -1772,6 +1801,9 @@ ul.rating li span.fas {
 	}
 	.welcome_right {
 		margin: 0 40px;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 414px){
@@ -1822,6 +1854,9 @@ ul.rating li span.fas {
 		top: -5px;
 		bottom: 30px;
 	}
+	.margin-table {
+		margin: 0px auto !important;
+	}
 }
 @media(max-width: 384px){
 	.portfolio-area li {
@@ -1840,7 +1875,7 @@ ul.rating li span.fas {
 		font-size: 30px;.navbar-light .navbar-brand, .navbar-light .navbar-toggler
 	}
 	.process-grids h3 {
-		font-size: 20px;
+		font-size: 19px;
 		letter-spacing: 1px;
 	}
 	.welcome h3 {
@@ -1878,6 +1913,9 @@ ul.rating li span.fas {
 	.serv_grid1 p {
 		font-size: 15px;
 	}
+	.margin-table {
+		margin: 0px auto !important;
+	}
 }
 @media(max-width: 375px){
 	.portfolio-area li {
@@ -1904,6 +1942,9 @@ ul.rating li span.fas {
 	}
 	.welcome_right {
 		margin: 0 20px;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 320px){
@@ -1935,6 +1976,9 @@ ul.rating li span.fas {
 	.welcome_bottom h4.head {
 		font-size: 20px;
 		letter-spacing: 1px;
+	}
+	.margin-table {
+		margin: 0px auto !important;
 	}
 }
 @media(max-width: 1440px){
@@ -1984,7 +2028,7 @@ ul.rating li span.fas {
 }
 .down-left{
 	position: absolute;
-	top: 260px;
+	top: 220px;
 }
 .link-mas{
 	color:#459034 !important;
@@ -1993,9 +2037,12 @@ ul.rating li span.fas {
 .margin-p {
 	margin: 0 2rem;
 }
+.margin-table {
+	margin: 0px auto !important;
+}
 .parrafos{
 	color: #696C70;
-	font-size: 20px !important;
+	font-size: 15px !important;
 }
 .arrow-f{
 	font-size: 30px !important;
@@ -2004,4 +2051,7 @@ ul.rating li span.fas {
 } 
 .hand-pointer{
 	cursor: pointer;
+}
+.heigth-carousel {
+	height: 390px !important;
 }

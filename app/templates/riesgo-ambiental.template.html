@@ -27,7 +27,7 @@
 <div class="banner">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active" style="height: 442px;">
+            <div class="carousel-item active heigth-carousel">
                 <div class="carousel-caption down-left">
                     <h3>Riesgo Ambiental</h3>
                 </div>
@@ -69,30 +69,31 @@
                               <td colspan="2">Metamórfico<br>(Escuadrón)</td>
                             </tr>
                             <tr class="td-green">
-                              <td>Kd*</td>
+                              <td><i>K<small>d</small>*</i></td>
                               <td>%</td>
-                              <td>Kd*</td>
+                              <td><i>K<small>d</small>*</i></td>
                               <td>%</td>
-                              <td>Kd*</td>
+                              <td><i>K<small>d</small>*</i></td>
                               <td>%</td>
-                              <td>Kd*</td>
+                              <td><i>K<small>d</small>*</i></td>
                               <td>%</td>
-                              <td>Kd*</td>
+                              <td><i>K<small>d</small>*</i></td>
                               <td>%</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaKD">
                               <td class="tr-green-1">{{herbicidas.herbicida}}</td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
-                              <td class="td-green"></td>
+                              <td class="td-green">{{herbicidas.trumao_kd}}</td>
+                              <td class="td-green">{{herbicidas.truma_per}}</td>
+                              <td class="td-green">{{herbicidas.rojo_arcilloso_kd}}</td>
+                              <td class="td-green">{{herbicidas.rojo_arcilloso_per}}</td>
+                              <td class="td-green">{{herbicidas.granitico_kd}}</td>
+                              <td class="td-green">{{herbicidas.granitico_per}}</td>
+                              <td class="td-green">{{herbicidas.arenoso_kd}}</td>
+                              <td class="td-green">{{herbicidas.arenoso_per}}</td>
+                              <td class="td-green">{{herbicidas.metamorfico_kd}}</td>
+                              <td class="td-green">{{herbicidas.metamorfico_per}}</td>
                             </tr>
+
                           </table>
                         </div>
             </div>
