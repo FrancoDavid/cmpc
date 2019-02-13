@@ -49,10 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
-                
-            </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11 margin-table">
                 <h4 class="text-uppercase mb-4"><i class="fas fa-angle-down arrow-f"></i>Coeficientes de adsorción (Kd) y porcentaje de desorción de los
                         herbicidas en cada uno de los principales cinco suelos forestales de CMPC</h4>
                         <div class="table-responsive">
@@ -99,9 +96,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
-            </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11 margin-table">
                 <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Tasa de disipación (K) de los herbicidas en cada uno de los principales
                         cinco suelos forstales de CMPC</h4>
                         <div class="table-responsive">
@@ -118,21 +113,21 @@
                               <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
                             </tr>
                             <tr class="td-green">
-                              <td>k*</td>
-                              <td>TD50**</td>
-                              <td>TD90**</td>
-                              <td>k*</td>
-                              <td>TD50**</td>
-                              <td>TD90**</td>
-                              <td>k*</td>
-                              <td>TD50**</td>
-                              <td>TD90**</td>
-                              <td>k*</td>
-                              <td>TD50*</td>
-                              <td>TD90**</td>
-                              <td>k*</td>
-                              <td>TD50*</td>
-                              <td>TD90**</td>
+                              <td><i>k*</i></td>
+                              <td>TD<small>50</small>**</td>
+                              <td>TD<small>90</small>**</td>
+                              <td><i>k*</i></td>
+                              <td>TD<small>50</small>**</td>
+                              <td>TD<small>90</small>**</td>
+                              <td><i>k*</i></td>
+                              <td>TD<small>50</small>**</td>
+                              <td>TD<small>90</small>**</td>
+                              <td><i>k*</i></td>
+                              <td>TD<small>50</small>**</td>
+                              <td>TD<small>90</small>**</td>
+                              <td><i>k*</i></td>
+                              <td>TD<small>50</small>**</td>
+                              <td>TD<small>90</small>**</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaK">
                               <td class="tr-green-1">{{herbicidas.herbicida}}</td>
@@ -157,9 +152,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
-            </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11 margin-table">
                 <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Índices de lixiviación</h4>
                 <p class="mb-3 text-justify parrafos">
                         Los coeficientes de adsorción y tasas de disipación permitieron estimar diferentes índices de lixiviación, los
@@ -180,39 +173,40 @@
                                     <td colspan="3">Metarmórfico<br>(Escuadrón)<br><br></td>
                                 </tr>
                                 <tr class="td-green">
-                                    <td>Briggs Rf</td>
-                                    <td>Hamaker Rf</td>
-                                    <td>GUS</td>
-                                    <td>Briggs Rf</td>
-                                    <td>Hamaker Rf</td>
-                                    <td>GUS</td>
-                                    <td>Briggs Rf</td>
-                                    <td>Hamaker Rf</td>
-                                    <td>GUS</td>
-                                    <td>Briggs Rf</td>
-                                    <td>Hamaker Rf</td>
-                                    <td>GUS</td>
-                                    <td>Briggs Rf</td>
-                                    <td>Hamaker Rf</td>
-                                    <td>GUS</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
                                 </tr>
                                 <tr ng-repeat="herbicidas in jsonTableHerbicidaLixiviacion">
                                     <td class="tr-green-1">{{herbicidas.herbicida}}</td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
-                                    <td class="td-green"></td>
+                                    <td class="td-green">{{herbicidas.trumao_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.trumao_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.trumao_gus}}</td>
+                                    <td class="td-green">{{herbicidas.rojo_arcilloso_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.rojo_arcilloso_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.rojo_arcilloso_gus}}</td>
+                                    <td class="td-green">{{herbicidas.granitico_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.granitico_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.granitico_gus}}</td>
+                                    <td class="td-green">{{herbicidas.arenoso_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.arenoso_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.arenoso_gus}}</td>
+                                    <td class="td-green">{{herbicidas.metamorfico_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.metamorfico_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.metamorfico_gus}}</td>
+                                    
                                 </tr>
                             </table>
                         </div>
@@ -220,9 +214,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
-            </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11 margin-table">
                 <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Lisímetros</h4>
                 <p class="mb-3 text-justify parrafos">
                         Los valores entregados por los índices de lixiviación fueron comparados con los resultados obtenidos en los
@@ -296,9 +288,7 @@
         </div>
         
         <div class="row">
-            <div class="col-sm-1 mb-sm-0 mb-3 margin-p">
-            </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11 margin-table">
                 <div class="table-responsive">
                     <table class="table table-bordered table-border-green">
                         <tr class="tr-green-1">
