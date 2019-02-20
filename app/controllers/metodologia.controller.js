@@ -2,6 +2,7 @@
 angular.module('app-cmpc')
     .controller("MetodologiaCtrl", ["$scope", '$location', function($scope, $location) {
         console.log('Metodo CTRL');
+        
         //Tabla 1 Suelos
         $scope.jsonTableSuelos = [
             {
@@ -49,7 +50,7 @@ angular.module('app-cmpc')
                 limo    : '5'
             },
             {
-                suelo  : 'Metaformico coster',
+                suelo  : 'Metaformico costero',
                 ph  : '4,96',
                 conductividad_electrica : '0.08',
                 suma_bases  :   '6,50',
