@@ -1487,6 +1487,7 @@ ul.rating li span.fas {
 	.information h4 {
 		font-size: 20px;
 		letter-spacing: 0px;
+		text-align: right;
 	}
 	.information p {
 		font-size: 15px;
@@ -1771,6 +1772,7 @@ ul.rating li span.fas {
 	.information h4 {
 		font-size: 19px;
 		letter-spacing: 1px;
+		text-align: right;
 	}
 	.w3_agileits_contact_left h3 {
 		font-size: 25px;
@@ -1923,6 +1925,7 @@ ul.rating li span.fas {
 	}
 	.information h4 {
 		font-size: 18px;
+		text-align: right;
 	}
 	.w3layouts_team_grid {
 		margin: 0 40px;

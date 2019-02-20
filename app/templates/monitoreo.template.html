@@ -23,14 +23,29 @@
 <div class="col-md-12">
     <div class="mt-5 information">
         <div class="row">
-            <div class="col-xs-11">
-                <p class="mb-3 text-justify margin-p parrafos">
+            <div class="col-sm-11 margin-table">
+                <p class="mb-3 text-justify parrafos">
                         En base a antecedentes técnicos respecto a potencial de uso futuro de ciertos suelos, cercanías a zonas de
                         protección de recursos naturales y áreas urbanas o poblados, protección de cuencas hídricas relevantes, y las
                         estimaciones de Riesgo Ambiental, se seleccionaron dos áreas relevantes, las cuales están siendo monitoreadas en
                         forma mensual, para determinar la evolución de los residuos de herbicidas en el suelo y la potencial presencia de
                         estos residuos en las aguas
                 </p>
+
+                <ng-map center="37.09024, -95.712891" zoom="4" mayTypeId="TERRAIN">
+                        <shape name="circle" ng-repeat="city in vm.cities" no-watcher="true"
+                          stroke-color="#FF0000"
+                          stroke-opacity="0.8"
+                          stroke-weight="2"
+                          fill-color="#FF0000"
+                          fill-opacity="0.35"
+                          center="{{city.position}}"
+                          radius="{{vm.getRadius(city.population)}}">
+                        </shape>
+                      </ng-map>
+
+
+
             </div>
     </div>
 
