@@ -19,13 +19,28 @@ var configApp = function($routeProvider){
         .when('/monitoreo',{
             templateUrl: './app/templates/monitoreo.template.html'
         })
+        .when('/trumao',{
+            templateUrl: './app/templates/trumao.template.html'
+        })
+        .when('/arenoso',{
+            templateUrl: './app/templates/arenoso.template.html'
+        })
+        .when('/granitico',{
+            templateUrl: './app/templates/granitico.template.html'
+        })
+        .when('/metamorfico',{
+            templateUrl: './app/templates/metamorfico.template.html'
+        })
+        .when('/rojo-arcilloso',{
+            templateUrl: './app/templates/rojoArcilloso.template.html'
+        })
 
         //este es digamos, al igual que en un switch el default, en caso que 
         //no hayamos concretado que nos redirija a la página principal
         .otherwise({ reditrectTo : "/" });
 };
  
-var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage'])
+var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMap'])
 
 app.config(configApp)
 app.directive('navBar', NavBar);
