@@ -6,86 +6,82 @@
         background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/bosque1.jpg) no-repeat;
         background-size: cover;
     }
+    .custom-marker.my1 {
+    font-size: 1.5em;
+    padding: 10px;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: #7F7F7F solid 1px;
+    }
 
+    .custom-marker.my1:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 6px 0;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -6px;
+    bottom: -6px;
+    left: 50%;
+    }
 
-    .custom-marker {
-      }
-      .custom-marker.my1 {
-        font-size: 1.5em;
-        padding: 10px;
-        background: #fff;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        border: #7F7F7F solid 1px;
-      }
+    .custom-marker.my1:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 6px 0;
+    border-color: #7F7F7F transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    margin-left: -6px;
+    bottom: -7px;
+    left: 50%;
+    }
 
-      .custom-marker.my1:after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 7px 6px 0;
-        border-color: #fff transparent;
-        display: block;
-        width: 0;
-        z-index: 1;
-        margin-left: -6px;
-        bottom: -6px;
-        left: 50%;
-      }
+    .custom-marker.my2 {
+    font-size: 1.5em;
+    padding: 10px;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: #7F7F7F solid 1px;
+    background: red;
+    }
 
-      .custom-marker.my1:before {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 7px 6px 0;
-        border-color: #7F7F7F transparent;
-        display: block;
-        width: 0;
-        z-index: 0;
-        margin-left: -6px;
-        bottom: -7px;
-        left: 50%;
-      }
+    .custom-marker.my2:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 6px 0;
+    border-color: red transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -6px;
+    bottom: -6px;
+    left: 50%;
+    }
 
-      .custom-marker.my2 {
-        font-size: 1.5em;
-        padding: 10px;
-        background: #fff;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        border: #7F7F7F solid 1px;
-        background: red;
-      }
-
-      .custom-marker.my2:after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 7px 6px 0;
-        border-color: red transparent;
-        display: block;
-        width: 0;
-        z-index: 1;
-        margin-left: -6px;
-        bottom: -6px;
-        left: 50%;
-      }
-
-      .custom-marker.my2:before {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 7px 6px 0;
-        border-color: #7F7F7F transparent;
-        display: block;
-        width: 0;
-        z-index: 0;
-        margin-left: -6px;
-        bottom: -7px;
-        left: 50%;
-      }
+    .custom-marker.my2:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 7px 6px 0;
+    border-color: #7F7F7F transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    margin-left: -6px;
+    bottom: -7px;
+    left: 50%;
+    }
 </style>
 
 <div class="banner">
@@ -111,14 +107,20 @@
                         forma mensual, para determinar la evolución de los residuos de herbicidas en el suelo y la potencial presencia de
                         estos residuos en las aguas
                 </p>
+                
+                <p class="mb-3 text-justify parrafos">
+                        Para conocer los lugares de monitoreo, pincha cada uno de los puntos de monitoreo marcados en el mapa.
+                </p>
+
                 <ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;">
-                    <custom-marker ng-repeat="cm in customMarkers" position="{{cm.address}}"
-                      on-mouseover="mouseover()" on-mouseout="mouseout()" on-click="click()">
-                      <div class="{{cm.class}}">
-                          <div>{{cm.nombre_suelo}}</div> 
+                    <custom-marker ng-repeat="cm in suelos" position="{{cm.address}}"
+                      on-mouseover="hoverEfect()" on-mouseout="mouseoutEfect()" >
+                      <div class="{{cm.class}}" ng-click="toSuelo(cm.id_suelo)">
+                        <div>{{cm.nombre_suelo}}</div> 
                       </div>
                     </custom-marker>
                 </ng-map>
             </div>
     </div>
 </div>
+
