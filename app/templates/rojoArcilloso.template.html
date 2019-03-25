@@ -91,23 +91,23 @@
         bottom: -7px;
         left: 50%;
         }
-    
         .table-border-green th, .table-border-green td {
-            border: 1px solid #46943C !important;
-            text-align:center
-        }
-        .tr-green-1{
-            background-color:#6AA663;
-        }
-        .tr-green-2{
-            background-color:#7BC372;
-        }
-        .center-tr{
-            padding-top: 4rem !important;
-        }
-        .td-green{
-            background-color:#94E08B;
-        }
+        border: 1px solid #386f31 !important;
+        text-align:center;
+        color:white;
+    }
+    .tr-green-1{
+        background-color:#548d4c;
+    }
+    .tr-green-2{
+        background-color:#6aa662;
+    }
+    .center-tr{
+        padding-top: 4rem !important;
+    }
+    .td-green{
+        background-color:#318e24;
+    }
         
     </style>
     
@@ -142,7 +142,7 @@
                         <i class="fas fa-angle-down arrow-f"></i>
                         Puntos de monitoreo
                     </h4>
-                    <ng-map zoom="14" center="-37.828622, -72.301612" style="height:600px;">
+                    <ng-map zoom="14" center="-37.828622, -72.301612" style="height:600px;" map-type-id="SATELLITE">
                             <custom-marker position="{{suelo.address}}">
                               <div class="{{suelo.class}}">
                                 <div>{{suelo.nombre_suelo}}</div> 
