@@ -48,6 +48,19 @@
         padding: 0px;
         height: 100px;
     }
+    .modal-backdrop{
+        background: #3e7b26;
+    }
+    .link-blue{
+        color: #0b9cf8;
+        font-size: 0.9rem; 
+        cursor:pointer;
+    }
+    .modal-rounded {
+        border-radius: 18px 18px 18px 18px;
+        -moz-border-radius: 18px 18px 18px 18px;
+        -webkit-border-radius: 18px 18px 18px 18px;
+    }
    
 
 </style>
@@ -91,7 +104,7 @@
                             <a class="nav-link nav-menu" ng-click="toMonitoreo();" ng-class="{'nav-menu-active' : toActive('/monitoreo')}">Monitoreo</a>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-cmpc">Ingresar
+                            <button class="btn btn-cmpc" data-toggle="modal" data-target="#modal-login">Ingresar
                         </li>            
                     </ul>
                 </div>
@@ -101,3 +114,36 @@
 </div>
 
 <!--Header-->
+
+<!-- Modal -->
+<div id="modal-login" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content modal-rounded">
+            <div class="modal-header" style="text-align:center; border-bottom: 0;">
+                <h4 class="modal-title">Iniciar sesión</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" style="border-top:0;">
+                <a class="link-blue" data-dismiss="modal">Olvidé mi contraseña</a>
+                <button class="btn btn-cmpc" data-dismiss="modal">Ingresar</button>
+            </div>
+        </div>
+    
+    </div>
+</div>
