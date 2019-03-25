@@ -112,7 +112,7 @@
                         Para conocer los lugares de monitoreo, pincha cada uno de los puntos de monitoreo marcados en el mapa.
                 </p>
 
-                <ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;">
+                <ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;" map-type-id="SATELLITE">
                     <custom-marker ng-repeat="cm in suelos" position="{{cm.address}}"
                       on-mouseover="hoverEfect()" on-mouseout="mouseoutEfect()" >
                       <div class="{{cm.class}}" ng-click="toSuelo(cm.id_suelo)">

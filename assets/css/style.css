@@ -2058,3 +2058,8 @@ ul.rating li span.fas {
 .heigth-carousel {
 	height: 390px !important;
 }
+.link-blue{
+	color: #0b9cf8 !important;
+	font-size: 0.9rem; 
+	cursor:pointer;
+}
