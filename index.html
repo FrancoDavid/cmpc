@@ -126,6 +126,24 @@
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
+
+
+			$(document).scroll(function () {
+				var $nav = $(".fixed-top");
+				console.log($nav.height());
+				//$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			});
+
+
+			$(document).ready(function(){
+				$(window).scroll(function(){
+					var scroll = $(window).scrollTop();
+					console.log(scroll);
+					var $nav = $(".fixed-top");
+					console.log($nav.height());
+					$nav.toggleClass('scrolled', scroll > $nav.height());
+				})
+			})
 		});
 	</script>
 	<!-- here stars scrolling icon -->
@@ -150,17 +168,7 @@
 	<!-- FlexSlider-JavaScript -->
 	<script defer src="./assets/js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
-		$(function(){
-			SyntaxHighlighter.all();
-				});
-				$(window).load(function(){
-				$('.flexslider').flexslider({
-					animation: "slide",
-					start: function(slider){
-						$('body').removeClass('loading');
-					}
-			});
-		});
+
 	</script>
 	<!-- //FlexSlider-JavaScript -->
 <!-- //js-scripts -->
