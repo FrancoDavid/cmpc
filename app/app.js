@@ -42,6 +42,6 @@ var configApp = function($routeProvider){
  
 var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMap'])
 
-app.config(configApp)
+app.config(configApp);
 app.directive('navBar', NavBar);
-app.directive('footer', Footer)
+app.directive('footerApp', Footer);
