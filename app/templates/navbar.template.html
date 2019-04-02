@@ -1,6 +1,6 @@
 <style>
     .navbar-brand {
-        padding: 0px;
+        padding: 0;
     }
     .navbar-brand>img {
         height: 100%;
@@ -8,12 +8,19 @@
         width: auto;
     }
     .nav-menu {
-        color:white !important;
+        color:black !important;
         text-decoration: none !important;
         cursor: pointer;
     }
+    .nav-menu:hover{
+        color:#4aa83d !important;
+    }
     .nav-menu-active{
-        color: #416529 !important;
+        color: #4aa83d !important;
+    }
+    .drop-menu-active {
+        background-color:#55ac33 !important ;
+        color:white !important;
     }
     .nav-inferior{
         background-color: #bdbbbb;
@@ -45,7 +52,7 @@
         background-color: #3e7b26;
     }
     .padding-nav-white {
-        padding: 0px;
+        padding: 0;
         height: 100px;
     }
     .modal-backdrop{
@@ -56,59 +63,70 @@
         -moz-border-radius: 18px 18px 18px 18px;
         -webkit-border-radius: 18px 18px 18px 18px;
     }
-   
 
+    .fixed-top.scrolled {
+        background-color: #4aa83d !important;
+        transition: background-color 200ms linear;
+    }
+
+    .fixed-top.scrolled .nav-link, .fixed-top.scrolled .navbar-brand {
+        color:white !important;
+    }
+    .fixed-top.scrolled .nav-dropdown {
+        background-color: #4aa83d !important;
+    }
+    .fixed-top.scrolled .btn-cmpc{
+        background-color: #3e7b26;
+    }
+
+    .modal-color-titulo {
+        color: #55ac33;
+    }
 </style>
 
 <!--Header-->
 <div ng-controller="MainController">
-    <header>
-            <div class="container agile-banner_nav">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light padding-nav-white">
-                    <a class="navbar-brand logo-cmpc hand-pointer" ng-click="toHome();">cmpc <img src="./assets/images/cmpc_images/separador.png" class="img-responsive icon-cmpc"><span class="display"></span></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-            </div>
-    </header>
-    <div class="nav-inferior">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/')}" ng-click="toHome();" >Inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/sobre-nosotros')}" ng-click="toAbout();">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn nav-dropdown nav-link nav-menu dropdown-toggle" data-toggle="dropdown" ng-class="{'nav-menu-active' : toActiveProyecto()}">Proyecto
-                                <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a ng-click="toMethod();" class="dropdown-menux">Metodología</a></li>
-                                    <li><a ng-click="toResult();" class="dropdown-menux">Resultados</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/riesgo-ambiental')}" ng-click="toRiesgoAmbiental();">Riesgo Ambiental</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-menu" ng-click="toMonitoreo();" ng-class="{'nav-menu-active' : toActive('/monitoreo')}">Monitoreo</a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-cmpc" data-toggle="modal" data-target="#modal-login">Ingresar
-                        </li>            
-                    </ul>
-                </div>
-                
-            </nav>
-    </div>
-</div>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color:white;">
+        <a class="navbar-brand logo-cmpc hand-pointer" ng-click="toHome();">
+            cmpc
+            <!--<img src="./assets/images/cmpc_images/separador.png" class="img-responsive icon-cmpc">-->
+            <span class="display"></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
 
-<!--Header-->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/')}" ng-click="toHome();">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/sobre-nosotros')}" ng-click="toAbout();">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn nav-dropdown nav-link nav-menu dropdown-toggle" data-toggle="dropdown" ng-class="{'drop-menu-active ' : toActiveProyecto()}">Proyecto
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a ng-click="toMethod();" class="dropdown-menux">Metodología</a></li>
+                            <li><a ng-click="toResult();" class="dropdown-menux">Resultados</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-menu" ng-class="{'nav-menu-active' : toActive('/riesgo-ambiental')}" ng-click="toRiesgoAmbiental();">Riesgo Ambiental</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-menu" ng-click="toMonitoreo();" ng-class="{'nav-menu-active' : toActive('/monitoreo')}">Monitoreo</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-cmpc" data-toggle="modal" data-target="#modal-login">Ingresar
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
 <!-- Modal -->
 <div id="modal-login" class="modal fade" role="dialog">
@@ -116,7 +134,7 @@
         <!-- Modal content-->
         <div class="modal-content modal-rounded">
             <div class="modal-header" style="text-align:center; border-bottom: 0;">
-                <h4 class="modal-title">Iniciar sesión</h4>
+                <h4 class="modal-title modal-color-titulo">Iniciar sesión</h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -139,6 +157,6 @@
                 <button class="btn btn-cmpc" data-dismiss="modal">Ingresar</button>
             </div>
         </div>
-    
+
     </div>
 </div>

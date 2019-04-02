@@ -40,8 +40,15 @@ var configApp = function($routeProvider){
         .otherwise({ reditrectTo : "/" });
 };
  
-var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMap'])
+var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMap', 'ngAnimate']);
 
-app.config(configApp)
+app.config(configApp);
+app.run(function ($rootScope, $timeout, $window) {
+    $rootScope.$on('$routeChangeSuccess', function () {
+        $timeout(function () {
+            $window.scrollTo(0, 0);
+        }, 500);
+    });
+});
 app.directive('navBar', NavBar);
-app.directive('footer', Footer)
+app.directive('footerApp', Footer);

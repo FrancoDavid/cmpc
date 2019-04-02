@@ -55,7 +55,8 @@
 
 <body>
 	<nav-bar></nav-bar>
-	<div ng-view></div>
+	<div ng-view class="view"></div>
+	<footer-app></footer-app>
 	<!-- <footer></footer> -->
 </body>
 
@@ -67,6 +68,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
 	<script src="./app/directives/directives.js"></script>
 	<script src="./app/app.js"></script>
 	<script src="./app/service.js"></script>
@@ -126,6 +128,14 @@
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
+
+			$(document).ready(function(){
+				$(window).scroll(function(){
+					let scroll = $(window).scrollTop();
+					const $nav = $(".fixed-top");
+					$nav.toggleClass('scrolled', scroll > $nav.height());
+				})
+			})
 		});
 	</script>
 	<!-- here stars scrolling icon -->
@@ -150,17 +160,7 @@
 	<!-- FlexSlider-JavaScript -->
 	<script defer src="./assets/js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
-		$(function(){
-			SyntaxHighlighter.all();
-				});
-				$(window).load(function(){
-				$('.flexslider').flexslider({
-					animation: "slide",
-					start: function(slider){
-						$('body').removeClass('loading');
-					}
-			});
-		});
+
 	</script>
 	<!-- //FlexSlider-JavaScript -->
 <!-- //js-scripts -->

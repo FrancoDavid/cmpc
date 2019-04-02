@@ -2063,3 +2063,7 @@ ul.rating li span.fas {
 	font-size: 0.9rem; 
 	cursor:pointer;
 }
+
+.view .ng-enter {
+	background-color: red;
+}
