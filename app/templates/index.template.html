@@ -23,94 +23,104 @@
     
 </style>
 
-
-<div class="banner">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active heigth-carousel img-pino4">
-                <div class="carousel-caption down-left">
-                    <h2 class="title-tipografia">I + D</h2>
-                    <h3 class="subtitle-tipografia">Sustentabilidad Forestal</h3>
+<div id="index">
+    <div class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active heigth-carousel img-pino4">
+                    <div class="carousel-caption down-left">
+                        <h2 class="title-tipografia">I + D</h2>
+                        <h3 class="subtitle-tipografia" >Sustentabilidad Forestal</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div ng-controller="MainController">
+        <section class="process py-5 my-lg-5 m-top-null">
+            <div class="container">
+                <div class="row process-grids">
+                    <div class="col-lg-4 col-md-6 grid1 title-center">
+                        <!-- <span class="fab fa-digital-ocean"></span> -->
+                        <img src="./assets/images/cmpc_images/separador.png" class="img-responsive separador-cmpc">
+                        <h3 class="text-uppercase mt-3 title-separador">Objetivo</h3>
+                        <p class="mt-sm-5 mt-3 parrafos text-justify">Obtener información del comportamiento y destino ambiental de plaguicidas y fertilizantes usados en la producción forestal.</p>
+                        <br>
+                        <div>
+                            <ul class="mt-4">
+                                <li class="mt-2"><span class="fas fa-angle-right"></span><a ng-click="toAbout();" class="link-mas hand-pointer">Ver más</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 grid1 mt-md-0 mt-5 title-center">
+                        <!-- <span class="fab fa-digital-ocean"></span> -->
+                        <img src="./assets/images/cmpc_images/separador.png" class="img-responsive separador-cmpc">
+                        <h3 class="text-uppercase mt-3 title-separador">Metodología</h3>
+                        <p class="mt-sm-5 mt-3 parrafos text-justify">A través de estudios en condiciones controladas y monitoreos de aguas y suelos.</p>
+                        <br>
+                        <br>
+                        <div>
+                            <ul class="mt-4">
+                                <li class="mt-2"><span class="fas fa-angle-right"></span><a ng-click="toMethod();" class="link-mas hand-pointer">Ver más</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 grid1 mt-lg-0 mt-5 title-center">
+                        <!-- <span class="fab fa-digital-ocean"></span> -->
+                        <img src="./assets/images/cmpc_images/separador.png" class="separador-cmpc">
+                        <h3 class="text-uppercase mt-3 title-separador">Resultados</h3>
+                        <p class="mt-sm-5 mt-3 parrafos text-justify">En base a la estimación de Riesgo Ambiental para cada herbicida y el monitoreo de aguas, se desarrollarán estrategias de control de malezas sustentables.</p>
+                        <div>
+                            <ul class="mt-4">
+                                <li class="mt-2"><span class="fas fa-angle-right"></span><a ng-click="toResult();" class="link-mas hand-pointer">Ver más</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="odometer1" id="index-img-2">
+            <div class="layer py-5">
+                <div class="container py-lg-5">
+                    <h3 class="heading mb-3 mt-2 text-capitalize text-center">Sustentabilidad Forestal</h3>
+                    <div class="row w3layouts_statistics_grid_right">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="col-md-12">
+            <div class="mt-5 information">
+                <div class="row">
+                    <div class="col-sm-1 mb-sm-0 mb-3 hidden-xs">
+
+                    </div>
+                    <div class="col-sm-10">
+
+                        <h4 class="text-uppercase mb-4"><i class="fas fa-angle-right arrow-f"></i>Nuestro compromiso con la sustentabilidad forestal</h4>
+                        <p class="mb-3 text-justify parrafos">
+                            Buscar una solución a la enfermedad que está secando las ramas de las araucarias; recuperar el toromiro (arbusto endémico de la Isla de Pascua extinto en dicha zona); y ayudar a mantener viva una tradición musical brasilera a través de la producción de gaitas con madera de eucalipto certificada. Todo eso y mucho más es parte del trabajo diario realizado en los viveros de CMPC.
+                        </p>
+                        <p class="mb-3 text-justify parrafos">
+                            Los centros de cultivo de la empresa, el vivero Carlos Douglas ubicado en la comuna de Cabrero en la región del Biobío, en Chile, y Forestal Celulosa Riograndense localizado en Guaíba, estado de Río Grande del Sur, en Brasil, además de reproducir, cuidar y almacenar eucalipto y/o pino radiata (árboles con los que CMPC obtiene celulosa y madera) están también enfocados en recuperar y conservar flora endémica de cada país que se encuentre en estado vulnerable, en peligro de extinción o extinta en su hábitat natural.<a class="link-mas hand-pointer" href="https://www.cmpc.com"> Leer más</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<div ng-controller="MainController">
-    <section class="process py-5 my-lg-5 m-top-null">
-        <div class="container">
-            <div class="row process-grids">
-                <div class="col-lg-4 col-md-6 grid1 title-center">
-                    <!-- <span class="fab fa-digital-ocean"></span> -->
-                    <img src="./assets/images/cmpc_images/separador.png" class="img-responsive separador-cmpc">
-                    <h3 class="text-uppercase mt-3 title-separador">Objetivo</h3>
-                    <p class="mt-sm-5 mt-3 parrafos text-justify">Obtener información del comportamiento y destino ambiental de plaguicidas y fertilizantes usados en la producción forestal.</p>
-                    <br>
-                    <div>
-                        <ul class="mt-4">
-                            <li class="mt-2"><span class="fas fa-angle-right"></span><a ng-click="toAbout();" class="link-mas hand-pointer">Ver más</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 grid1 mt-md-0 mt-5 title-center">
-                    <!-- <span class="fab fa-digital-ocean"></span> -->
-                    <img src="./assets/images/cmpc_images/separador.png" class="img-responsive separador-cmpc">
-                    <h3 class="text-uppercase mt-3 title-separador">Metodología</h3>
-                    <p class="mt-sm-5 mt-3 parrafos text-justify">A través de estudios en condiciones controladas y monitoreos de aguas y suelos.</p>
-                    <br>
-                    <br>
-                    <div>
-                        <ul class="mt-4">
-                            <li class="mt-2"><span class="fas fa-angle-right"></span><a ng-click="toMethod();" class="link-mas hand-pointer">Ver más</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 grid1 mt-lg-0 mt-5 title-center">
-                    <!-- <span class="fab fa-digital-ocean"></span> -->
-                    <img src="./assets/images/cmpc_images/separador.png" class="separador-cmpc">
-                    <h3 class="text-uppercase mt-3 title-separador">Resultados</h3>
-                    <p class="mt-sm-5 mt-3 parrafos text-justify">En base a la estimación de Riesgo Ambiental para cada herbicida y el monitoreo de aguas, se desarrollarán estrategias de control de malezas sustentables.</p>
-                    <div>
-                        <ul class="mt-4">
-                            <li class="mt-2"><span class="fas fa-angle-right"></span><a ng-click="toResult();" class="link-mas hand-pointer">Ver más</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="odometer1" id="index-img-2">
-        <div class="layer py-5">
-            <div class="container py-lg-5">
-                <h3 class="heading mb-3 mt-2 text-capitalize text-center">Sustentabilidad Forestal</h3>
-                <div class="row w3layouts_statistics_grid_right">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <div class="col-md-12">
-        <div class="mt-5 information">
-            <div class="row">
-                <div class="col-sm-1 mb-sm-0 mb-3 hidden-xs">
-                    
-                </div>
-                <div class="col-sm-10">
-                    
-                    <h4 class="text-uppercase mb-4"><i class="fas fa-angle-right arrow-f"></i>Nuestro compromiso con la sustentabilidad forestal</h4>
-                    <p class="mb-3 text-justify parrafos">
-                        Buscar una solución a la enfermedad que está secando las ramas de las araucarias; recuperar el toromiro (arbusto endémico de la Isla de Pascua extinto en dicha zona); y ayudar a mantener viva una tradición musical brasilera a través de la producción de gaitas con madera de eucalipto certificada. Todo eso y mucho más es parte del trabajo diario realizado en los viveros de CMPC.
-                    </p>
-                    <p class="mb-3 text-justify parrafos">
-                        Los centros de cultivo de la empresa, el vivero Carlos Douglas ubicado en la comuna de Cabrero en la región del Biobío, en Chile, y Forestal Celulosa Riograndense localizado en Guaíba, estado de Río Grande del Sur, en Brasil, además de reproducir, cuidar y almacenar eucalipto y/o pino radiata (árboles con los que CMPC obtiene celulosa y madera) están también enfocados en recuperar y conservar flora endémica de cada país que se encuentre en estado vulnerable, en peligro de extinción o extinta en su hábitat natural.<a class="link-mas hand-pointer" href="https://www.cmpc.com"> Leer más</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#index').css('display', 'none');
+        $('#index').fadeIn(500);
+    });
+</script>
 
 
