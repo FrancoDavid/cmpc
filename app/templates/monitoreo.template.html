@@ -1,11 +1,4 @@
 <style>
-    .carousel-item {
-        background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/bosque1.jpg) no-repeat;
-        background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/bosque1.jpg) no-repeat;
-        background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/bosque1.jpg) no-repeat;
-        background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(./assets/images/cmpc_images/bosque1.jpg) no-repeat;
-        background-size: cover;
-    }
     .custom-marker.my1 {
     font-size: 1.5em;
     padding: 10px;
@@ -84,43 +77,54 @@
     }
 </style>
 
-<div class="banner">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active heigth-carousel">
-                <div class="carousel-caption down-left">
-                    <h3>Monitoreo</h3>
+
+<div id="monitoreo">
+    <div class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active heigth-carousel img-bosque1">
+                    <div class="carousel-caption down-left">
+                        <h3>Monitoreo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12" ng-controller="MonitoreoController">
+        <div class="mt-5 mb-5 information">
+            <div class="row">
+                <div class="col-sm-11 margin-table">
+                    <p class="mb-3 text-justify parrafos">
+                        En base a antecedentes técnicos respecto a potencial de uso futuro de ciertos suelos, cercanías a zonas de
+                        protección de recursos naturales y áreas urbanas o poblados, protección de cuencas hídricas relevantes, y las
+                        estimaciones de Riesgo Ambiental, se seleccionaron dos áreas relevantes, las cuales están siendo monitoreadas en
+                        forma mensual, para determinar la evolución de los residuos de herbicidas en el suelo y la potencial presencia de
+                        estos residuos en las aguas
+                    </p>
+
+                    <p class="mb-3 text-justify parrafos">
+                        Para conocer los lugares de monitoreo, pincha cada uno de los puntos de monitoreo marcados en el mapa.
+                    </p>
+
+                    <ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;" map-type-id="SATELLITE">
+                        <custom-marker ng-repeat="cm in suelos" position="{{cm.address}}"
+                                       on-mouseover="hoverEfect()" on-mouseout="mouseoutEfect()" >
+                            <div class="{{cm.class}}" ng-click="toSuelo(cm.id_suelo)">
+                                <div>{{cm.nombre_suelo}}</div>
+                            </div>
+                        </custom-marker>
+                    </ng-map>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="col-md-12" ng-controller="MonitoreoController">
-    <div class="mt-5 mb-5 information">
-        <div class="row">
-            <div class="col-sm-11 margin-table">
-                <p class="mb-3 text-justify parrafos">
-                        En base a antecedentes técnicos respecto a potencial de uso futuro de ciertos suelos, cercanías a zonas de
-                        protección de recursos naturales y áreas urbanas o poblados, protección de cuencas hídricas relevantes, y las
-                        estimaciones de Riesgo Ambiental, se seleccionaron dos áreas relevantes, las cuales están siendo monitoreadas en
-                        forma mensual, para determinar la evolución de los residuos de herbicidas en el suelo y la potencial presencia de
-                        estos residuos en las aguas
-                </p>
-                
-                <p class="mb-3 text-justify parrafos">
-                        Para conocer los lugares de monitoreo, pincha cada uno de los puntos de monitoreo marcados en el mapa.
-                </p>
-
-                <ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;" map-type-id="SATELLITE">
-                    <custom-marker ng-repeat="cm in suelos" position="{{cm.address}}"
-                      on-mouseover="hoverEfect()" on-mouseout="mouseoutEfect()" >
-                      <div class="{{cm.class}}" ng-click="toSuelo(cm.id_suelo)">
-                        <div>{{cm.nombre_suelo}}</div> 
-                      </div>
-                    </custom-marker>
-                </ng-map>
-            </div>
-    </div>
-</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#monitoreo').css('display', 'none');
+        $('#monitoreo').fadeIn(500);
+    });
+</script>
 
