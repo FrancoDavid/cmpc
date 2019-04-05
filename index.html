@@ -11,17 +11,7 @@
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Career Corp Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript">
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
+	<meta name="keywords" content="CMPC, SIDAL" />
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/images/fa-icons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="assets/images/fa-icons/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/fa-icons/apple-icon-72x72.png">
@@ -35,12 +25,9 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/fa-icons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/images/fa-icons/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/fa-icons/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="assets/images/fa-icons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<!--// Meta tag Keywords -->
-	<link rel="stylesheet" href="./assets/css/flexslider.css" type="text/css" media="all" /><!-- for testimonials -->
 	<!-- css files -->
 	<link rel="stylesheet" href="./assets/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
@@ -55,7 +42,10 @@
 
 <body>
 	<nav-bar></nav-bar>
-	<div ng-view></div>
+
+	<div ng-view  id="1"></div>
+
+	<footer-app></footer-app>
 	<!-- <footer></footer> -->
 </body>
 
@@ -67,6 +57,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-resource.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
 	<script src="./app/directives/directives.js"></script>
 	<script src="./app/app.js"></script>
 	<script src="./app/service.js"></script>
@@ -80,42 +71,11 @@
 	<script src="./app/controllers/arenoso.controller.js"></script>
 	<script src="./app/controllers/granitico.controller.js"></script>
 	<script src="./app/controllers/metamorfico.controller.js"></script>
-	<!-- <script src="./node_modules/ngmap/build/scripts/ng-map.min.js"></script> -->
 	<script src="./assets/js/ng-map.min.js"></script> 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjtS30DatR6E7fr3OEWNBPxO7rPhv5c8Q&callback=initMap"
 	type="text/javascript"></script>
-	
-	
-	<!-- //js -->	
-	<!-- odometer-script -->
-	<script src="./assets/js/odometer.js"></script>
-	<script>
-		window.odometerOptions = {
-			format: '(ddd).dd'
-		};
-	</script>
-	<script>
-		setTimeout(function () {
-			jQuery('#w3l_stats1').html(25);
-		}, 1500);
-	</script>
-	<script>
-		setTimeout(function () {
-			jQuery('#w3l_stats2').html(330);
-		}, 1500);
-	</script>
-	<script>
-		setTimeout(function () {
-			jQuery('#w3l_stats3').html(542);
-		}, 1500);
-	</script>
-	<script>
-		setTimeout(function () {
-			jQuery('#w3l_stats4').html(222);
-		}, 1500);
-	</script>
-	<!-- //odometer-script -->
 
+	<!-- //js -->
 	<!-- start-smoth-scrolling -->
 	<script src="./assets/js/SmoothScroll.min.js"></script>
 	<script type="text/javascript" src="./assets/js/move-top.js"></script>
@@ -126,6 +86,16 @@
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 			});
+
+			$(window).scroll(function(){
+					let scroll = $(window).scrollTop();
+					const $nav = $(".fixed-top");
+					$nav.toggleClass('scrolled', scroll > $nav.height());
+			});
+
+			$('body').css('display', 'none');
+			$('body').fadeIn(500);
+
 		});
 	</script>
 	<!-- here stars scrolling icon -->
@@ -136,33 +106,13 @@
 				containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
 				scrollSpeed4: 1200,
-				easingType: 'linear' 
+				easingType: 'linear'
 				};
 			*/
-								
 			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
-	<!-- //here ends scrolling icon -->
-	<!-- start-smoth-scrolling -->
-	
-	<!-- FlexSlider-JavaScript -->
-	<script defer src="./assets/js/jquery.flexslider.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			SyntaxHighlighter.all();
-				});
-				$(window).load(function(){
-				$('.flexslider').flexslider({
-					animation: "slide",
-					start: function(slider){
-						$('body').removeClass('loading');
-					}
-			});
 		});
 	</script>
-	<!-- //FlexSlider-JavaScript -->
+	<!-- //here ends scrolling icon -->
 <!-- //js-scripts -->
 
 

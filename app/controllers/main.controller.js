@@ -11,6 +11,7 @@ angular.module('app-cmpc')
         */
 
         console.log('MainCOntroller');
+
         var vm = $scope;
 
         vm.toHome = function(){
