@@ -334,12 +334,12 @@ span.display {
 	color: #777;
 	font-size: 16px;
 	line-height: 28px;
-	letter-spacing: .5px;
+	letter-spacing: 0px;
 }
 .welcome p.initial {
 	font-family: initial;
 	font-size: 18px;
-	letter-spacing: 3px;
+	letter-spacing: 0px;
 	color: #666;
 	text-decoration: underline;
 }
@@ -2044,7 +2044,7 @@ ul.rating li span.fas {
 	margin: 0 auto !important;
 }
 .parrafos{
-	color: #696C70;
+	color: #222 !important;
 	font-size: 15px !important;
 }
 .arrow-f{

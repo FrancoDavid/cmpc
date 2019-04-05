@@ -19,8 +19,7 @@
         color: #4aa83d !important;
     }
     .drop-menu-active {
-        background-color:#55ac33 !important ;
-        color:white !important;
+        color:#4aa83d !important;
     }
     .nav-inferior{
         background-color: #bdbbbb;
@@ -31,7 +30,8 @@
         text-transform: none !important;
     }
     .nav-dropdown {
-        background-color: #bdbbbb !important;
+       background-color: white;
+       font-weight: 600;
     }
     .nav-dropdown:focus{
         box-shadow: none !important;
@@ -78,7 +78,6 @@
     .fixed-top.scrolled .btn-cmpc{
         background-color: #3e7b26;
     }
-
     .modal-color-titulo {
         color: #55ac33;
     }
@@ -107,7 +106,8 @@
                 <li class="nav-item">
                     <div class="dropdown">
                         <button class="btn nav-dropdown nav-link nav-menu dropdown-toggle" data-toggle="dropdown" ng-class="{'drop-menu-active ' : toActiveProyecto()}">Proyecto
-                            <span class="caret"></span></button>
+                            <span class="caret"></span>
+                        </button>
                         <ul class="dropdown-menu">
                             <li><a ng-click="toMethod();" class="dropdown-menux">Metodología</a></li>
                             <li><a ng-click="toResult();" class="dropdown-menux">Resultados</a></li>
