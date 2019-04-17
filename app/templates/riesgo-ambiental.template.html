@@ -16,6 +16,10 @@
     .td-green{
         background-color:#318e24;
     }
+    .white-bar{
+        background-color:white !important;
+        padding: 4px !important;
+    }
 </style>
 
 <div id="riesgo">
@@ -36,43 +40,56 @@
             <div class="row">
                 <div class="col-sm-11 margin-table">
                     <p class="mb-3 text-justify parrafos">
-                        Para cada uno de los herbicidas actualmente en uso en los programas de control de malezas, se determinaron sus coeficientes de adsorción (Kd) y desorción (%) en los cinco suelos de producción forestal CMPC, así como sus tasas de degradación (k), vida media (TD50) y degradación del 90% de los residuos (TD90).
+                        Para cada uno de los herbicidas actualmente en uso en los programas de control de malezas, se determinaron sus coeficientes de adsorción (<i>Kd</i>) y desorción (%) en los cinco suelos de producción forestal CMPC, así como sus tasas de degradación (k), vida media (<i>TD</i><small>50</small>) y degradación del 90% de los residuos (<i>TD</i><small>90</small>).
                     </p>
                 </div>
             </div>
+            <!-- Cuadro 1 -->
             <div class="row">
                 <div class="col-sm-11 margin-table">
-                    <h4 class="text-uppercase mb-4"><i class="fas fa-angle-down arrow-f"></i>Coeficientes de adsorción (Kd) y porcentaje de desorción de los
-                        herbicidas en cada uno de los principales cinco suelos forestales de CMPC</h4>
+                    <h4 class="mb-4"><i class="fas fa-angle-down arrow-f"></i>Cuadro1.</h4>
+                    <h6 class="mb-4">Coeficientes de adsorción (<i>Kd</i>) y porcentaje de desorción de los
+                            herbicidas en cada uno de los principales cinco suelos forestales de CMPC.</h6>
                     <div class="table-responsive">
                         <table class="table table-bordered table-border-green">
                             <tr class="tr-green-1">
-                                <th rowspan="3" class="center-tr">Herbicida</th>
+                                <th rowspan="3" class="center-tr">Herbicidas</th>
+                                <th rowspan="12" class="white-bar"></th>
                                 <th colspan="10">Suelos</th>
                             </tr>
                             <tr class="tr-green-2">
-                                <td colspan="2">Trumao
-                                    <br>(Rucamanqui)</td>
-                                <td colspan="2">Rojo Arcilloso
-                                    <br>(San Juan)</td>
-                                <td colspan="2">Granítico
-                                    <br>(San Antonio)</td>
-                                <td colspan="2">Arenoso
-                                    <br>(Las Islas)</td>
-                                <td colspan="2">Metamórfico
-                                    <br>(Escuadrón)</td>
+                                <td colspan="2">
+                                    Trumao
+                                    <br>(Rucamanqui)
+                                </td>
+                                <td colspan="2">
+                                    Rojo arcilloso
+                                    <br>(San Juan )
+                                </td>
+                                <td colspan="2">
+                                    Granítico
+                                    <br>(San Antonio)
+                                </td>
+                                <td colspan="2">
+                                    Arenoso
+                                    <br>(Las Islas)
+                                </td>
+                                <td colspan="2">
+                                    Metarmórfico
+                                    <br>(Escuadrón)
+                                </td>
                             </tr>
                             <tr class="td-green">
-                                <td><i>K<small>d</small>*</i></td>
-                                <td>%</td>
-                                <td><i>K<small>d</small>*</i></td>
-                                <td>%</td>
-                                <td><i>K<small>d</small>*</i></td>
-                                <td>%</td>
-                                <td><i>K<small>d</small>*</i></td>
-                                <td>%</td>
-                                <td><i>K<small>d</small>*</i></td>
-                                <td>%</td>
+                                <td><i>Kd</i>(L kg-1)</td>
+                                <td>Desorción(%)</td>
+                                <td><i>Kd</i>(L kg-1)</td>
+                                <td>Desorción(%)</td>
+                                <td><i>Kd</i>(L kg-1)</td>
+                                <td>Desorción(%)</td>
+                                <td><i>Kd</i>(L kg-1)</td>
+                                <td>Desorción(%)</td>
+                                <td><i>Kd</i>(L kg-1)</td>
+                                <td>Desorción(%)</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaKD">
                                 <td class="tr-green-1">{{herbicidas.herbicida}}</td>
@@ -87,180 +104,202 @@
                                 <td class="td-green">{{herbicidas.metamorfico_kd}}</td>
                                 <td class="td-green">{{herbicidas.metamorfico_per}}</td>
                             </tr>
-
                         </table>
                     </div>
                     <p class="mb-3 text-justify parrafos">
-                        *Kd (L kg-1)   
+                        *Glifosato en proceso de validación de su método analítico.  
                     </p>
                      
                 </div>
             </div>
+            <!-- Cuadro 2 -->
             <div class="row">
                 <div class="col-sm-11 margin-table">
-                    <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Tasa de disipación (K) de los herbicidas en cada uno de los principales
-                        cinco suelos forstales de CMPC</h4>
+                    <h4 class="mb-4"><i class="fas fa-angle-down arrow-f"></i>Cuadro 2.</h4>
+                    <h6 class="mb-4">Tasa de disipación (<i>K</i>) de los herbicidas en cada uno de los principales cinco suelos forstales de CMPC.</h6>
                     <div class="table-responsive">
                         <table class="table table-bordered table-border-green">
                             <tr class="tr-green-1">
-                                <th rowspan="3" class="center-tr">Herbicida</th>
-                                <th colspan="15">Suelos</th>
+                                <th rowspan="2" class="center-tr">Herbicidas</th>
+                                <th rowspan="12" class="white-bar"></th>
+                                <th colspan="3">
+                                    Trumao
+                                        <br>(Rucamanqui)
+                                </th>
+                                <th rowspan="12" class="white-bar"></th>
+                                <th colspan="3">
+                                    Rojo arcilloso
+                                        <br>(San Juan)
+                                </th>
+                                <th rowspan="12" class="white-bar"></th>
+                                <th colspan="3">
+                                    Granítico
+                                        <br>(San Antonio)
+                                </th>
+                                <th rowspan="12" class="white-bar"></th>
+                                <th colspan="3">
+                                    Arenoso
+                                        <br>(Las Islas)
+                                </th>
+                                <th rowspan="12" class="white-bar"></th>
+                                <th colspan="3">
+                                    Metarmórfico
+                                        <br>(Escuadrón)
+                                </th>
                             </tr>
                             <tr class="tr-green-2">
-                                <td colspan="3">Trumao
-                                    <br>(Rucamanqui)</td>
-                                <td colspan="3">Rojo arcilloso
-                                    <br>(San Juan )</td>
-                                <td colspan="3">Granítico
-                                    <br>(San Antonio)</td>
-                                <td colspan="3">Arenoso
-                                    <br>(Las Islas)</td>
-                                <td colspan="3">Metarmórfico
-                                    <br>(Escuadrón)
-                                    <br>
-                                    <br>
-                                </td>
-                            </tr>
-                            <tr class="td-green">
                                 <td><i>k*</i></td>
-                                <td>TD<small>50</small>**</td>
-                                <td>TD<small>90</small>**</td>
+                                <td><i>TD</i><small>50</small>**</td>
+                                <td><i>TD</i><small>90</small>**</td>
+
                                 <td><i>k*</i></td>
-                                <td>TD<small>50</small>**</td>
-                                <td>TD<small>90</small>**</td>
+                                <td><i>TD</i><small>50</small>**</td>
+                                <td><i>TD</i><small>90</small>**</td>
+
                                 <td><i>k*</i></td>
-                                <td>TD<small>50</small>**</td>
-                                <td>TD<small>90</small>**</td>
+                                <td><i>TD</i><small>50</small>**</td>
+                                <td><i>TD</i><small>90</small>**</td>
+                                
                                 <td><i>k*</i></td>
-                                <td>TD<small>50</small>**</td>
-                                <td>TD<small>90</small>**</td>
+                                <td><i>TD</i><small>50</small>**</td>
+                                <td><i>TD</i><small>90</small>**</td>
+                                
                                 <td><i>k*</i></td>
-                                <td>TD<small>50</small>**</td>
-                                <td>TD<small>90</small>**</td>
+                                <td><i>TD</i><small>50</small>**</td>
+                                <td><i>TD</i><small>90</small>**</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaK">
                                 <td class="tr-green-1">{{herbicidas.herbicida}}</td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
+                                <td class="td-green">{{herbicidas.trumao_k}}</td>
+                                <td class="td-green">{{herbicidas.trumao_td_50}}</td>
+                                <td class="td-green">{{herbicidas.trumao_td_90}}</td>
+                                <td class="td-green">{{herbicidas.rojo_arcilloso_k}}</td>
+                                <td class="td-green">{{herbicidas.rojo_arcilloso_td_50}}</td>
+                                <td class="td-green">{{herbicidas.rojo_arcilloso_td_90}}</td>
+                                <td class="td-green">{{herbicidas.granitico_k}}</td>
+                                <td class="td-green">{{herbicidas.granitico_per}}</td>
+                                <td class="td-green">{{herbicidas.granitico_per}}</td>
+                                <td class="td-green">{{herbicidas.arenoso_kd}}</td>
+                                <td class="td-green">{{herbicidas.arenoso_per}}</td>
+                                <td class="td-green">{{herbicidas.arenoso_per}}</td>
+                                <td class="td-green">{{herbicidas.metamorfico_kd}}</td>
+                                <td class="td-green">{{herbicidas.metamorfico_per}}</td>
+                                <td class="td-green">{{herbicidas.metamorfico_per}}</td>
                             </tr>
                         </table>
                     </div>
                     <p class="mb-3 text-justify parrafos">
-                        *1 días &sup1; **TD<small>50</small>y TD<small>90</small> (Días)
+                        *1 días &sup1; **<i>TD</i><small>50</small> y <i>TD</i><small>90</small> (días).
                     </p>
                 </div>
             </div>
+            <!-- Cuadro 3 -->
             <div class="row">
                 <div class="col-sm-11 margin-table">
-                    <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Índices de lixiviación</h4>
+                    <h4 class="mb-4"><i class="fas fa-angle-down arrow-f"></i>Cuadro 3.</h4>
+                    <h6 class="mb-4">Índices de lixiviación de los herbicidas en cada uno de los principales suelos forestales de CMPC (Seleccionados de la publicación Kogan et al. 2007).</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-border-green">
+                                <tr class="tr-green-1">
+                                    <th rowspan="2" class="center-tr">Herbicidas</th>
+                                    <th rowspan="12" class="white-bar"></th>
+                                    <th colspan="3">
+                                        Trumao
+                                            <br>(Rucamanqui)
+                                    </th>
+                                    <th rowspan="12" class="white-bar"></th>
+                                    <th colspan="3">
+                                        Rojo arcilloso
+                                            <br>(San Juan)
+                                    </th>
+                                    <th rowspan="12" class="white-bar"></th>
+                                    <th colspan="3">
+                                        Granítico
+                                            <br>(San Antonio)
+                                    </th>
+                                    <th rowspan="12" class="white-bar"></th>
+                                    <th colspan="3">
+                                        Arenoso
+                                            <br>(Las Islas)
+                                    </th>
+                                    <th rowspan="12" class="white-bar"></th>
+                                    <th colspan="3">
+                                        Metarmórfico
+                                            <br>(Escuadrón)
+                                    </th>
+                                </tr>
+                                <tr class="tr-green-2">
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                    <td><i>Briggs Rf </i> &sup1;</td>
+                                    <td><i>Hamaker Rf</i> &sup1;</td>
+                                    <td><i>GUS</i>&sup1;</td>
+                                </tr>
+                                <tr ng-repeat="herbicidas in jsonTableHerbicidaLixiviacion">
+                                    <td class="tr-green-1">{{herbicidas.herbicida}}</td>
+                                    <td class="td-green">{{herbicidas.trumao_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.trumao_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.trumao_gus}}</td>
+                                    <td class="td-green">{{herbicidas.rojo_arcilloso_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.rojo_arcilloso_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.rojo_arcilloso_gus}}</td>
+                                    <td class="td-green">{{herbicidas.granitico_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.granitico_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.granitico_gus}}</td>
+                                    <td class="td-green">{{herbicidas.arenoso_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.arenoso_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.arenoso_gus}}</td>
+                                    <td class="td-green">{{herbicidas.metamorfico_briggs}}</td>
+                                    <td class="td-green">{{herbicidas.metamorfico_hamaker}}</td>
+                                    <td class="td-green">{{herbicidas.metamorfico_gus}}</td>
+                                </tr>
+                        </table>
+                    </div>
                     <p class="mb-3 text-justify parrafos">
-                        Los coeficientes de adsorción y tasas de disipación permitieron estimar diferentes índices de lixiviación, los cuales permiten hacer una comparación del riesgo potencial de lixiviación de diferentes herbicidas en un suelo o el mismo herbicida en diferentes suelos.
+                        &sup1; Herbicidas con valores más cercanos a 1 indican mayor riesgo de lixiviación.
                     </p>
                     <p class="mb-3 text-justify parrafos">
-                        Índices de lixiviación de los herbicidas en cada uno de los principales cinco suelos forestales de CMPC. Indices seleccionados de la
-                        publicación <strong>Kogan et al. 2007.</strong>
+                        &sup2; Herbicidas con valores menores a 1,8 considerados no lixiviables; con valores entre 1,8 y 2,8 considerados con riesgo de lixiviación; con valores mayores a 2,8 considerados lixiviables.
+                    </p>
+                </div>
+            </div>
+            <!-- Cuadro 4 -->
+            <div class="row">
+                <div class="col-sm-11 margin-table">
+                    <h4 class="mb-4"><i class="fas fa-angle-down arrow-f"></i>Cuadro 4.</h4>
+                    <h6 class="mb-4">Porcentaje de los residuos de los herbicidas, lixiviados bajo los 15 y 90 cm de profundidad de suelo en los estudios realizados en columnas con suelo disturbado.</h6>
+                    <p class="mb-3 text-justify parrafos">
+                        Los valores arrojados por los índices de lixiviación fueron contrastados con los resultados obtenidos en los estudios en las columnas de suelo disturbados, relacionando el riesgo relativo de cada índice con la profundidad alcanzada por los herbicidas y con la masa del herbicida lixiviada. Esto permitió validar los Índices como herramientas de análisis de riesgo para herbicidas que a futuro sean incorporados a los programas de manejo de malezas, y así ir desarrollando programas de manejo de malezas de bajo riesgo ambiental para cada condición de producción forestal de CMPC.
                     </p>
                     <div class="table-responsive">
                         <table class="table table-bordered table-border-green">
                             <tr class="tr-green-1">
                                 <th rowspan="3" class="center-tr">Herbicida</th>
-                                <th colspan="15">Suelos</th>
-                            </tr>
-                            <tr class="tr-green-2">
-                                <td colspan="3">Trumao
-                                    <br>(Rucamanqui)</td>
-                                <td colspan="3">Rojo arcilloso
-                                    <br>(San Juan )</td>
-                                <td colspan="3">Granítico
-                                    <br>(San Antonio)</td>
-                                <td colspan="3">Arenoso
-                                    <br>(Las Islas)</td>
-                                <td colspan="3">Metarmórfico
-                                    <br>(Escuadrón)
-                                    <br>
-                                    <br>
-                                </td>
-                            </tr>
-                            <tr class="td-green">
-                                <td><i>Briggs Rf </i> &sup1;</td>
-                                <td><i>Hamaker Rf</i> &sup1;</td>
-                                <td><i>GUS</i>&sup1;</td>
-                                <td><i>Briggs Rf </i> &sup1;</td>
-                                <td><i>Hamaker Rf</i> &sup1;</td>
-                                <td><i>GUS</i>&sup1;</td>
-                                <td><i>Briggs Rf </i> &sup1;</td>
-                                <td><i>Hamaker Rf</i> &sup1;</td>
-                                <td><i>GUS</i>&sup1;</td>
-                                <td><i>Briggs Rf </i> &sup1;</td>
-                                <td><i>Hamaker Rf</i> &sup1;</td>
-                                <td><i>GUS</i>&sup1;</td>
-                                <td><i>Briggs Rf </i> &sup1;</td>
-                                <td><i>Hamaker Rf</i> &sup1;</td>
-                                <td><i>GUS</i>&sup1;</td>
-                            </tr>
-                            <tr ng-repeat="herbicidas in jsonTableHerbicidaLixiviacion">
-                                <td class="tr-green-1">{{herbicidas.herbicida}}</td>
-                                <td class="td-green">{{herbicidas.trumao_briggs}}</td>
-                                <td class="td-green">{{herbicidas.trumao_hamaker}}</td>
-                                <td class="td-green">{{herbicidas.trumao_gus}}</td>
-                                <td class="td-green">{{herbicidas.rojo_arcilloso_briggs}}</td>
-                                <td class="td-green">{{herbicidas.rojo_arcilloso_hamaker}}</td>
-                                <td class="td-green">{{herbicidas.rojo_arcilloso_gus}}</td>
-                                <td class="td-green">{{herbicidas.granitico_briggs}}</td>
-                                <td class="td-green">{{herbicidas.granitico_hamaker}}</td>
-                                <td class="td-green">{{herbicidas.granitico_gus}}</td>
-                                <td class="td-green">{{herbicidas.arenoso_briggs}}</td>
-                                <td class="td-green">{{herbicidas.arenoso_hamaker}}</td>
-                                <td class="td-green">{{herbicidas.arenoso_gus}}</td>
-                                <td class="td-green">{{herbicidas.metamorfico_briggs}}</td>
-                                <td class="td-green">{{herbicidas.metamorfico_hamaker}}</td>
-                                <td class="td-green">{{herbicidas.metamorfico_gus}}</td>
-
-                            </tr>
-                        </table>
-                    </div>
-                    <p class="mb-3 text-justify parrafos">
-                        1 Valores mas cercanos a 1 indican mayor riesgo de lixiviación. 
-                    </p>
-                    <p class="mb-3 text-justify parrafos">
-                        2 Valores menores a 1,8 no lixiviables; valores entre 1,8  y 2,8 riesgo de lixiviación; valores mayores a 2,8 lixiviables. 
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-11 margin-table">
-                    <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i>Lisímetros</h4>
-                    <p class="mb-3 text-justify parrafos">
-                        Los valores entregados por los índices de lixiviación fueron comparados con los resultados obtenidos en los estudios en lisímetros, relacionando el índice de lixiviación con la profundidad alcanzada por cada herbicida en cada uno de los suelos y con la masa del herbicida lixiviada bajo los 15 cm. Esto permitió validar los Índices como herramientas de análisis de riesgo para futuros herbicidas que sean incorporados a los programas de manejo de malezas, y así ir utilizando herbicidas de bajo riesgo de lixiviación en zonas con napas de aguas muy superficiales o cercanos a cuencas de importancia para aguas de uso humano.
-                    </p>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-border-green">
-                            <tr class="tr-green-1">
-                                <th rowspan="4" class="center-tr">Herbicida</th>
-                                <th colspan="10">Suelos</th>
+                                <th rowspan="12" class="white-bar"></th>
                             </tr>
                             <tr class="tr-green-2">
                                 <td colspan="2">Trumao
                                     <br>(Rucamanqui)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Rojo arcilloso
                                     <br>(San Juan)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Granítico
                                     <br>(San Antonio)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Arenoso
                                     <br>(San Antonio)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Metamórfico
                                     <br>(Escuadron)</td>
                             </tr>
@@ -286,30 +325,23 @@
                                 <td>Lixiviado
                                     <br>Bajo 90cm</td>
                             </tr>
-                            <tr class="td-green">
-                                <td colspan="10">%</td>
-                            </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaLisimetros">
                                 <td class="tr-green-1">{{herbicidas.herbicida}}</td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
-                                <td class="td-green"></td>
+                                <td class="td-green">{{herbicidas.trumao_lix_15}}</td>
+                                <td class="td-green">{{herbicidas.trumao_lix_90}}</td>
+                                <td class="td-green">{{herbicidas.rojo_arcilloso_lix_15}}</td>
+                                <td class="td-green">{{herbicidas.rojo_arcilloso_lix_90}}</td>
+                                <td class="td-green">{{herbicidas.granitico_lix_15}}</td>
+                                <td class="td-green">{{herbicidas.granitico_lix_90}}</td>
+                                <td class="td-green">{{herbicidas.arenoso_lix_15}}</td>
+                                <td class="td-green">{{herbicidas.arenoso_lix_90}}</td>
+                                <td class="td-green">{{herbicidas.metamorfico_lix_15}}</td>
+                                <td class="td-green">{{herbicidas.metamorfico_lix_90}}</td>
                             </tr>
                         </table>
                     </div>
-                    <p class="mb-1 text-justify parrafos">
-                        Porcentaje de los herbicidas lixiviados bajo los 15 y 90 cm del suelo, obtenidos en los estudios realizados en lisímetros.
-                    </p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-sm-11 margin-table">
                     <p class="mb-3 text-justify parrafos mt-5">
@@ -320,42 +352,42 @@
                     </p>
                 </div>
             </div>
-
+            <!-- Cuadro 5 -->
             <div class="row">
                 <div class="col-sm-11 margin-table">
                     <div class="table-responsive">
                         <table class="table table-bordered table-border-green">
                             <tr class="tr-green-1">
                                 <th rowspan="3" class="center-tr">Herbicida</th>
-                                <th colspan="10">Suelos</th>
+                                <th rowspan="12" class="white-bar"></th>
                             </tr>
                             <tr class="tr-green-2">
                                 <td colspan="2">Trumao
                                     <br>(Rucamanqui)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Rojo arcilloso
                                     <br>(San Juan)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Granítico
                                     <br>(San Antonio)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Arenoso
                                     <br>(San Antonio)</td>
+                                <th rowspan="12" class="white-bar"></th>
                                 <td colspan="2">Metamórfico
                                     <br>(Escuadron)</td>
                             </tr>
                             <tr class="td-green">
-                                <td>IRA*</td>
-                                <td>IRA carga*</td>
-                                <td>IRA*
-                                    <br>
-                                </td>
-                                <td>IRA carga*</td>
-                                <td>IRA*
-                                    <br>
-                                </td>
-                                <td>IRA carga*</td>
-                                <td>IRA*</td>
-                                <td>IRA carga*</td>
-                                <td>IRA*</td>
-                                <td>IRA carga*</td>
+                                <td>IRA&sup1;</td>
+                                <td>IRA carga&sup2;</td>
+                                <td>IRA&sup1;</td>
+                                <td>IRA carga&sup2;</td>
+                                <td>IRA&sup1;</td>
+                                <td>IRA carga&sup2;</td>
+                                <td>IRA&sup1;</td>
+                                <td>IRA carga&sup2;</td>
+                                <td>IRA&sup1;</td>
+                                <td>IRA carga&sup2;</td>
                             </tr>
                             <tr ng-repeat="herbicidas in jsonTableHerbicidaIRA">
                                 <td class="tr-green-1">{{herbicidas.herbicida}}</td>
@@ -373,11 +405,11 @@
                         </table>
                     </div>
                     <p class="mb-1 text-justify parrafos">
-                        IRA corresponde al Índice de Riesgo Ambiental ponderado incorporando la toxicología de cada herbicida y el riesgo de
-                        contaminación de aguas (IRA carga), valores van desde 4 a 64. IRA carga corresponde al Índice de Riesgo ambiental solo evaluando
-                        el riesgo potencial de que el herbicida sea un contaminante de aguas superficiales y profundas, valores van desde 3 a 48. En ambos
-                        casos los valores mas altos indican un riesgo mayor.
+                        IRA&sup1; corresponde al Índice de Riesgo Ambiental ponderado incorporando la toxicología de cada herbicida y el riesgo de contaminación de aguas (IRA carga), valores van desde 4 a 64.
                     </p>
+                    <p class="mb-1 text-justify parrafos">
+                        IRA&sup2; corresponde al Índice de Riesgo ambiental sólo evaluando el riesgo potencial de que el herbicida sea un contaminante de aguas superficiales y profundas, valores van desde el 3 al 48. En ambos casos, los valores más altos indican un riesgo mayor. 
+                    </p>        
                 </div>
             </div>
         </div>

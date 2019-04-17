@@ -8,7 +8,7 @@ angular.module('app-cmpc')
             {
                 suelo  : 'Trumao',
                 ph  : '6,05',
-                conductividad_electrica : '0.05',
+                conductividad_electrica : '0,05',
                 suma_bases  :   '4,56',
                 capacidad_intercambio   : '77,8',
                 materia_organica :  '13,0',
@@ -17,11 +17,11 @@ angular.module('app-cmpc')
                 limo    : '29'
             },
             {
-                suelo  : 'Rojo arcillado',
+                suelo  : 'Rojo arcilloso',
                 ph  : '5,60',
-                conductividad_electrica : '0.04',
+                conductividad_electrica : '0,04',
                 suma_bases  :   '6,48',
-                capacidad_intercambio   : '20,7',
+                capacidad_intercambio   : '24,0',
                 materia_organica :  '9,3',
                 arena   :   '33',
                 arcilla :   '48',
@@ -30,7 +30,7 @@ angular.module('app-cmpc')
             {
                 suelo  : 'Granítico',
                 ph  : '5,10',
-                conductividad_electrica : '0.08',
+                conductividad_electrica : '0,08',
                 suma_bases  :   '6,01',
                 capacidad_intercambio   : '32,6',
                 materia_organica :  '6,0',
@@ -41,8 +41,8 @@ angular.module('app-cmpc')
             {
                 suelo  : 'Arenoso',
                 ph  : '5,43',
-                conductividad_electrica : '0.02',
-                suma_bases  :   '4,56',
+                conductividad_electrica : '0,02',
+                suma_bases  :   '4,30',
                 capacidad_intercambio   : '9,8',
                 materia_organica :  '2,3',
                 arena   :   '93',
@@ -50,9 +50,9 @@ angular.module('app-cmpc')
                 limo    : '5'
             },
             {
-                suelo  : 'Metaformico costero',
+                suelo  : 'Metamórfico costero',
                 ph  : '4,96',
-                conductividad_electrica : '0.08',
+                conductividad_electrica : '0,08',
                 suma_bases  :   '6,50',
                 capacidad_intercambio   : '42,7',
                 materia_organica :  '16,1',
@@ -85,7 +85,7 @@ angular.module('app-cmpc')
             {
                 herbicida:  'Terbutilazina',
                 dosis:  '',
-                peso_molecular: '229,77',
+                peso_molecular: '299,71',
                 solubilidad_agua:'6,6',
                 coef_low_kow:'3,4',
                 pka:'1,9',
@@ -115,15 +115,15 @@ angular.module('app-cmpc')
                 disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Metsulfuronmetil',
+                herbicida:  'Metsulfuron-metil',
                 dosis:  '',
-                peso_molecular: '301,36',
+                peso_molecular: '381,36',
                 solubilidad_agua:'2.790',
                 coef_low_kow:'-1,87',
                 pka:'3,75',
                 densidad:'1,45',
-                presion_valor:'1,4x10-6',
-                coef_henry:'2.9x10-6',
+                presion_valor:'1,4x10-11',
+                coef_henry:'2,9x10-6',
                 dt_50_agua:'115',
                 dt_50_suelo:'28',
                 koc:'60',
@@ -131,14 +131,14 @@ angular.module('app-cmpc')
                 disruptor_endocrino:'no'
             },
             {
-                herbicida:  'Tricolpir',
+                herbicida:  'Triclopir',
                 dosis:  '',
                 peso_molecular: '256,5',
                 solubilidad_agua:'8.100',
                 coef_low_kow:'4,62',
                 pka:'3,97',
                 densidad:'1,3',
-                presion_valor:'1,01x10-4',
+                presion_valor:'1,0x10-4',
                 coef_henry:'2,9x10-3',
                 dt_50_agua:'25',
                 dt_50_suelo:'30',
@@ -198,16 +198,16 @@ angular.module('app-cmpc')
             {
                 herbicida:  'Fluroxipir',
                 dosis:  '',
-                peso_molecular: '205,03',
+                peso_molecular: '255,03',
                 solubilidad_agua:'6.500',
                 coef_low_kow:'0,04',
                 pka:'2,94',
-                densidad:'1,04',
+                densidad:'1,09',
                 presion_valor:'3,8x10-10',
                 coef_henry:'1,7x10-10',
                 dt_50_agua:'11',
-                dt_50_suelo:'51',
-                koc:'60',
+                dt_50_sßsuelo:'51',
+                koc:'68',
                 riesgo_cancer:'no probable',
                 disruptor_endocrino:'no'
             }
