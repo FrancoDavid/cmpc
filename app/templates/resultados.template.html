@@ -24,8 +24,54 @@
                         Los resultados de los <b>monitoreos</b> de aguas y suelos en cada una de las <b>áreas de Estudio </b>, han ido permitiendo determinar indicadores de la evolución de la calidad de las aguas debido al efecto de la producción forestal y a su vez ir adecuando manejos productivos hacia un foco de sustentabilidad real y comprobada.
                     </p>
 
-                    <h4 class="mb-4 mt-5 text-justify">Para ver los resultados de este estudio, por favor Inicia Sesión</h4>
+                    <h4 class="mb-4 mt-5 text-justify" ng-show="!status_login">
+                        <a data-toggle="modal" data-target="#modal-login" class="hand-pointer">Para ver los resultados de este estudio, clickea aquí.</a>
+                    </h4>
+                    <h3 class="mb-4 mt-5 text-justify" ng-show="status_login">
+                        Descarga de resultados
+                    </h3>
+                    <p class="mb-3 text-justify parrafos" ng-show="status_login">
+                        Aquí podrás descargar las tablas de resultados de los distintos monitoreos ejecutados a lo largo de este proyecto.
+                    </p>
 
+                </div>
+            </div>
+            <div class="row mb-3" ng-show="status_login">
+                <div class="col-sm-11 margin-table">
+                    <h3 class="mb-4">
+                        <i class="fas fa-angle-down arrow-f"></i> 
+                        Sitio 1
+                    </h3>
+                    <h5 class="mb-1">
+                        Monitoreo de herbicidas en agua <a download="sitio1_monitoreo_herbicidas_agua.xlsx" href="assets/plantillas_excel/PlanillasMonitoreoCMPC.xlsx"><button class="btn ml-1"><i class="fa fa-download"></i></button></a>
+                    </h5>
+                    <h5 class="mb-1">
+                        Monitoreo de parámetros inorgánicos en agua 
+                        <a download="sitio1_monitoreo_inorganico_agua.xlsx" href="assets/plantillas_excel/PlanillasMonitoreoCMPC.xlsx"><button class="btn ml-1"><i class="fa fa-download"></i></button></a>
+                    </h5>
+                    <h5 class="mb-1">
+                        Monitoreo de herbicidas en suelo 
+                        <a download="sitio1_monitoreo_herbicidas_suelo.xlsx" href="assets/plantillas_excel/PlanillasMonitoreoCMPC.xlsx"><button class="btn ml-1"><i class="fa fa-download"></i></button></a>
+                    </h5>
+                </div>
+            </div>
+            <div class="row" ng-show="status_login">
+                <div class="col-sm-11 margin-table">
+                    <h3 class="mb-4">
+                        <i class="fas fa-angle-down arrow-f"></i> 
+                        Sitio 2
+                    </h3>
+                    <h5 class="mb-1">
+                        Monitoreo de herbicidas en agua <a download="sitio2_monitoreo_herbicidas_agua.xlsx" href="assets/plantillas_excel/PlanillasMonitoreoCMPC.xlsx"><button class="btn ml-1"><i class="fa fa-download"></i></button></a>
+                    </h5>
+                    <h5 class="mb-1">
+                        Monitoreo de parámetros inorgánicos en agua 
+                        <a download="sitio2_monitoreo_inorganico_agua.xlsx" href="assets/plantillas_excel/PlanillasMonitoreoCMPC.xlsx"><button class="btn ml-1"><i class="fa fa-download"></i></button></a>
+                    </h5>
+                    <h5 class="mb-1">
+                        Monitoreo de herbicidas en suelo 
+                        <a download="sitio2_monitoreo_herbicidas_suelo.xlsx" href="assets/plantillas_excel/PlanillasMonitoreoCMPC.xlsx"><button class="btn ml-1"><i class="fa fa-download"></i></button></a>
+                    </h5>
                 </div>
             </div>
         </div>

@@ -81,6 +81,13 @@
     .modal-color-titulo {
         color: #55ac33;
     }
+    .label-error-modal {
+        color: #d00b0b;
+    }
+    .icon-success{
+        font-size: 216%;
+        color: #328a10;
+    }
 </style>
 
 <!--Header-->
@@ -120,8 +127,11 @@
                 <li class="nav-item">
                     <a class="nav-link nav-menu" ng-click="toMonitoreo();" ng-class="{'nav-menu-active' : toActive('/monitoreo')}" data-toggle="collapse" data-target=".navbar-collapse">Monitoreo</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" ng-show="!status_login">
                     <button class="btn btn-cmpc" data-toggle="modal" data-target="#modal-login">Ingresar
+                </li>
+                <li class="nav-item" ng-show="status_login">
+                    <button class="btn btn-cmpc" ng-click="logout();">Cerrar Sesión
                 </li>
             </ul>
         </div>
@@ -129,33 +139,80 @@
 </div>
 
 <!-- Modal -->
-<div id="modal-login" class="modal fade" role="dialog">
+<div id="modal-login" class="modal fade" role="dialog" ng-controller="LoginController">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content modal-rounded">
             <div class="modal-header" style="text-align:center; border-bottom: 0;">
                 <h4 class="modal-title modal-color-titulo">Iniciar sesión</h4>
+                <i class="fas fa-check-circle icon-success" ng-show="icon_success"></i>
+                <div class="lds-css ng-scope" ng-show="loading"><div style="width:100%;height:100%" class="lds-dual-ring"><div></div></div><style type="text/css">@keyframes lds-dual-ring {
+                    0% {
+                      -webkit-transform: rotate(0);
+                      transform: rotate(0);
+                    }
+                    100% {
+                      -webkit-transform: rotate(360deg);
+                      transform: rotate(360deg);
+                    }
+                  }
+                  @-webkit-keyframes lds-dual-ring {
+                    0% {
+                      -webkit-transform: rotate(0);
+                      transform: rotate(0);
+                    }
+                    100% {
+                      -webkit-transform: rotate(360deg);
+                      transform: rotate(360deg);
+                    }
+                  }
+                  .lds-dual-ring {
+                    position: relative;
+                  }
+                  .lds-dual-ring div {
+                    position: absolute;
+                    width: 160px;
+                    height: 160px;
+                    top: 20px;
+                    left: 20px;
+                    border-radius: 50%;
+                    border: 8px solid #000;
+                    border-color: #52b548 transparent #52b548 transparent;
+                    -webkit-animation: lds-dual-ring 1.3s linear infinite;
+                    animation: lds-dual-ring 1.3s linear infinite;
+                  }
+                  .lds-dual-ring {
+                    width: 66px !important;
+                    height: 66px !important;
+                    -webkit-transform: translate(-33px, -33px) scale(0.33) translate(33px, 33px);
+                    transform: translate(-33px, -33px) scale(0.33) translate(33px, 33px);
+                  }
+                </style></div>
             </div>
-            <div class="modal-body">
-                <form>
-                    <div class="input-group mb-3">
+            <form ng-submit="login();">
+                <div class="modal-body">
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">@</span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+                        <input type="email" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1" required ng-model="username" ng-change="cleanLabelError();">
                     </div>
-                    <div class="input-group mb-3">
+                    <label class="mb-3">{{label_error_user}}</label>
+
+                    <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+                        <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" required ng-model="pass" ng-change="cleanLabelError();">
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer" style="border-top:0;">
-                <a class="link-blue" data-dismiss="modal">Olvidé mi contraseña</a>
-                <button class="btn btn-cmpc" data-dismiss="modal">Ingresar</button>
-            </div>
+                    <label>{{label_error_pass}}</label>
+                </div>
+            
+                <div class="modal-footer" style="border-top:0;">
+                    <a class="link-blue" data-dismiss="modal">Olvidé mi contraseña</a>
+                    <button type="submit" class="btn btn-cmpc">Ingresar</button>
+                </div>
+            </form>
         </div>
 
     </div>
