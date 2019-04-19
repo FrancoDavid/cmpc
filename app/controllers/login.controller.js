@@ -5,7 +5,7 @@ angular.module('app-cmpc')
         $scope.label_error_user = '';
         $scope.label_error_pass = '';
         $scope.loading = false;
-        $scope.icon_success = true;
+        $scope.icon_success = false;
 
         $scope.login = function(){
             let login_valido = loginService.login($scope.username,  $scope.pass);
