@@ -46,7 +46,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-11 margin-table">
-                    <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i> Principales suelos CMPC</h4>
+                    <h4 class="mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i> Principales suelos CMPC</h4>
                     <div class="table-responsive">
                         <table class="table table-bordered table-border-green" style="color:white;">
                             <col>
@@ -59,8 +59,8 @@
                             <colgroup span="1"></colgroup>
                             <tr class="tr-green-1">
                                 <td rowspan="2" class="center-tr"><b>Suelo</b></td>
-                                <td rowspan="2" class="center-tr"><b>ph</b></td>
-                                <th colspan="1" scope="colgroup">Condutividad eléctrica</th>
+                                <td rowspan="2" class="center-tr"><b>pH</b></td>
+                                <th colspan="1" scope="colgroup">Conductividad eléctrica</th>
                                 <th>Suma de bases</th>
                                 <th>Capacidad de intercambio catiónico</th>
                                 <th>Materia orgánica</th>
@@ -90,10 +90,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-11 margin-table">
-                    <h4 class="text-uppercase mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i> Estudios en condiciones controladas</h4>
+                    <h4 class="mb-4 mt-5"><i class="fas fa-angle-down arrow-f"></i> Estudios en condiciones controladas</h4>
                     <p class="mb-3 text-justify parrafos">
                         Con cada uno de los suelos se realizaron estudios de laboratorio destinados a determinar los coeficientes de
-                        adsorción y porcentaje de desroción de los herbicidas que actualmente están siendo utilizados en los programas
+                        adsorción y porcentaje de desorción de los herbicidas que actualmente están siendo utilizados en los programas
                         de manejo de malezas de la empresa CMPC.
                     </p>
                     <p class="mb-3 text-justify parrafos">
@@ -101,35 +101,36 @@
                         para los herbicidas estudiados.    
                     </p>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-border-green">
+                        <table class="table table-bordered table-border-green" style="white-space:pre-line !important;">
                             <tr class="tr-green-1">
                                 <th rowspan="3" class="center-tr">Herbicidas</th>
-                                <th rowspan="2" class="center-tr">Dosis&sup1;</th>
+                                <th rowspan="2" class="center-tr">Dosis&sup1;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                </th>
                                 <th colspan="10">Propiedades físico-química&sup2;</th>
-                                <th rowspan="3">Riesgo cáncer&sup3;</th>
-                                <th rowspan="3">Disruptor endocrino</th>
                             </tr>
                             <tr class="tr-green-2">
                                 <td>Peso molecular</td>
                                 <td>Solubilidad agua</td>
-                                <td>Coeficiento LogKow</td>
+                                <td>Coeficiente LogKow</td>
                                 <td><i>pKa</i></td></td>
                                 <td>Densidad</td>
-                                <td>Presion de valor</td>
-                                <td>Coeficiente de henry</td>
-                                <td>DT<small>50</small> Agua</td>
-                                <td>DT<small>50</small> Suelo</td>
+                                <td>Presión de valor</td>
+                                <td>Constante de Henry</td>
+                                <td><i>DT</i><small>50</small> Agua</td>
+                                <td><i>DT</i><small>50</small> Suelo</td>
                                 <td><i>K<small>oc</small></i></td>
                             </tr>
                             <tr class="td-green">
                                 <td><small>(kg ia ha&oline;&sup1;)</small></td>
-                                <td><small>(gmol&oline;&sup1;)</small></td>
+                                <td><small>(g mol&oline;&sup1;)</small></td>
                                 <td><small>(mg L&oline;&sup1; a 20°C)</small></td>
                                 <td><small>(--)</small></td>
                                 <td><small>(--)</small></td>
                                 <td><small>(g L&oline;&sup1;)</small></td>
                                 <td><small>(Pa a 20°C)</small></td>
-                                <td><small>(Pa m&sup2; mol&oline;&sup1;)</small></td>
+                                <td><small>(Pa m&sup3; mol&oline;&sup1;)</small></td>
                                 <td colspan="2"><small>(Días)</small></td>
                                 <td colspan="1"><small>(L kg&oline;&sup1;)</small></td>
                             </tr>
@@ -146,10 +147,13 @@
                                 <td class="td-green">{{herbicidas.dt_50_agua}}</td>
                                 <td class="td-green">{{herbicidas.dt_50_suelo}}</td>
                                 <td class="td-green">{{herbicidas.koc}}</td>
-                                <td class="td-green"><small>{{herbicidas.riesgo_cancer}}</small></td>
-                                <td class="td-green"><small>{{herbicidas.disruptor_endocrino}}</small></td>
                             </tr>
                         </table>
+                        <p class="mb-3 text-justify parrafos">
+                            Ninguno de los plaguicidas estudiados presenta riesgo de cáncer ni disrupción endocrina según <a href=">https://toxnet.nlm.nih.gov/" target="_blank">US EPA Carcinógenos</a> y <a href="http://ec.europa.eu/environment/chemicals/endocrine/documents/index_en.htm" target="_blank">European Commission</a>.</br>
+                            Dosis máximas para condiciones forestales.</br>
+                            Información obtenida desde: <a href="http://sitem.herts.ac.uk/aeru/ppdb/en/atoz.htm" target="_blank">Pesticides Properties Data Base</a>, <a href="http://pmep.cce.cornell.edu/" target="_blank">Pesticide Management Education Program</a> y <a href="https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/adaptive-cropping-systems-laboratory/docs/ppd/pesticide-list/" target="_blank">USDA ARS PesticideList</a>.
+                        </p>
                     </div>
                 </div>
             </div>

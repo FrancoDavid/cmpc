@@ -1,5 +1,5 @@
 angular.module('app-cmpc')
-    .controller("MainController", ["$scope", '$location', 'testService', function($scope, $location,testService) {
+    .controller("MainController", ["$scope", '$location', 'testService', '$rootScope', function($scope, $location,testService, $rootScope) {
         ///Llamada test servicio
         /* $scope.data = [];
         console.log('controller mainn!!');
@@ -11,6 +11,8 @@ angular.module('app-cmpc')
         */
 
         console.log('MainCOntroller');
+
+        //$rootScope.status_login = false;
 
         var vm = $scope;
 
@@ -41,6 +43,9 @@ angular.module('app-cmpc')
             } else {
                 return false;
             }
+        };
+        vm.logout = function(){
+            $rootScope.status_login = false;
         };
         
 

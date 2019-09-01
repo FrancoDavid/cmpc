@@ -44,6 +44,9 @@ var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMa
 
 app.config(configApp);
 app.run(function ($rootScope, $timeout, $window) {
+
+    $rootScope.status_login = false;
+
     $rootScope.$on('$routeChangeSuccess', function () {
         $timeout(function () {
             $window.scrollTo(0, 0);

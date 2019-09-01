@@ -42,6 +42,14 @@ angular.module('app-cmpc')
               break; 
           }
         };
+
+        vm.toGranitico = function(){
+          $location.url("/granitico");
+        };
+
+        vm.toTrumao = function(){
+          $location.url("/trumao");
+        };
         
     }   
 ]);

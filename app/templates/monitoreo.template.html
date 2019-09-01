@@ -104,17 +104,32 @@
                     </p>
 
                     <p class="mb-3 text-justify parrafos">
-                        Para conocer los lugares de monitoreo, pincha cada uno de los puntos de monitoreo marcados en el mapa.
+                        Para conocer los lugares de monitoreo, pincha en cada uno de los recuadros.
+                         <!-- pincha cada uno de los puntos de monitoreo marcados en el mapa. -->
                     </p>
 
-                    <ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;" map-type-id="SATELLITE">
+                    <!--<ng-map zoom="8" center="-37.134478, -71.761973" style="height:600px;" map-type-id="SATELLITE">
                         <custom-marker ng-repeat="cm in suelos" position="{{cm.address}}"
                                        on-mouseover="hoverEfect()" on-mouseout="mouseoutEfect()" >
                             <div class="{{cm.class}}" ng-click="toSuelo(cm.id_suelo)">
                                 <div>{{cm.nombre_suelo}}</div>
                             </div>
                         </custom-marker>
-                    </ng-map>
+                    </ng-map>-->
+
+
+                    <div class="row contact_information">
+                        <div class="col-md-6 mt-md-0 mt-4 hand-pointer" ng-click="toGranitico();">
+                            <div class="contact_right p-lg-5 p-4">
+                               <h1>Granítico</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-md-0 mt-4 hand-pointer" ng-click="toTrumao();">
+                            <div class="contact_right p-lg-5 p-4">
+                               <h1>Trumao</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
