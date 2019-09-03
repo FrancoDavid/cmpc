@@ -7,7 +7,7 @@ angular.module('app-cmpc')
         $scope.loading = false;
         $scope.icon_success = false;
 
-        $scope.login = function(){
+        $scope.login_ = function(){
             let login_valido = loginService.login($scope.username,  $scope.pass);
 
             switch(login_valido){
@@ -21,6 +21,14 @@ angular.module('app-cmpc')
                      $scope.loadinLogin();
                 break;
             }
+        };
+
+        $scope.login = function (){
+
+            loginService.loginFirebase($scope.username, $scope.pass)
+                .then(function(resp){
+                    console.log(resp);
+                });
         };
 
         $scope.cleanLabelError = function() {

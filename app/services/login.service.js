@@ -1,7 +1,10 @@
 angular.module('app-cmpc')
-    .service("loginService", ["$http", '$rootScope', function($http,$rootScope) {
-        return {
-            obtenerData: function(){
+    .service("loginService", ["$http", '$rootScope', '$firebaseAuth', function($http,$rootScope, $firebaseAuth) {
+
+      var firebaseAuthObject = $firebaseAuth();
+      
+      return {
+        obtenerData: function(){
               return $http({
                 method: "GET",
                 url: "/test_cmpc/cmpc/API/conexion.php"
@@ -12,8 +15,8 @@ angular.module('app-cmpc')
                 }
                 return result;
               });
-            },
-            login: function(user, pass){
+        },
+        login: function(user, pass){
                 const CLAVE_TEST = '123',
                     USER_TEST = 'pia@test.cl',
                     USER_VALID = (USER_TEST == user),
@@ -27,7 +30,10 @@ angular.module('app-cmpc')
                 } else {
                     return 0;
                 }
-            }
+        },
+        loginFirebase: function(user, pass){
+          return firebaseAuthObject.$signInWithEmailAndPassword(user, pass);
         }
+      }
     }   
 ]);
