@@ -39,10 +39,37 @@ var configApp = function($routeProvider){
         //no hayamos concretado que nos redirija a la página principal
         .otherwise({ reditrectTo : "/" });
 };
- 
-var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMap', 'ngAnimate']);
+
+
+
+
+var app = angular.module('app-cmpc',['ngRoute', 'ngResource', 'ngStorage', 'ngMap', 'ngAnimate', 'firebase']);
+
+/* var firebaseConfig = {
+    apiKey: "AIzaSyDzmzjDas7RHyIeumKSALUIqxrJm8K5yEw",
+    authDomain: "testta-e3a69.firebaseapp.com",
+    databaseURL: "https://testta-e3a69.firebaseio.com",
+    projectId: "testta-e3a69",
+    storageBucket: "testta-e3a69.appspot.com",
+    messagingSenderId: "372971739910",
+    appId: "1:372971739910:web:2460eadbaf16946c"
+  };
+
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+var ref = firebase.database().ref();
+
+console.log(ref); */
+
 
 app.config(configApp);
+
+/* app.factory("Auth", function($firebaseAuth){
+	return $firebaseAuth(ref);
+}); */
+
 app.run(function ($rootScope, $timeout, $window) {
 
     $rootScope.status_login = false;

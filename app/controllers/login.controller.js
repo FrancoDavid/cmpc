@@ -1,5 +1,5 @@
 angular.module('app-cmpc')
-    .controller("LoginController", ["$scope", '$location', 'loginService', '$timeout', '$rootScope', function($scope, $location, loginService, $timeout, $rootScope) {
+    .controller("LoginController", ["$scope", '$location', 'loginService', '$timeout', '$rootScope', function($scope, $location, loginService, $timeout, $rootScope) { 
         $scope.username = '';
         $scope.pass = '';
         $scope.label_error_user = '';
@@ -7,44 +7,39 @@ angular.module('app-cmpc')
         $scope.loading = false;
         $scope.icon_success = false;
 
-        $scope.login_ = function(){
-            let login_valido = loginService.login($scope.username,  $scope.pass);
-
-            switch(login_valido){
-                case 0 :
-                    $scope.label_error_user = 'E-mail incorrecto.';
-                break;
-                case 1 :
-                    $scope.label_error_pass = 'Contraseña incorrecta.';
-                break;
-                case 2:
-                     $scope.loadinLogin();
-                break;
-            }
-        };
-
         $scope.login = function (){
+            $scope.loading = true;
+            
+            var email_user = $scope.username;
+            var password = $scope.pass;
 
-            loginService.loginFirebase($scope.username, $scope.pass)
-                .then(function(resp){
-                    console.log(resp);
-                });
+            loginService.loginFirebase(email_user, password)
+                    .then(function(result){
+                        $scope.loading = false;
+                        $scope.icon_success = true;
+                        $rootScope.status_login = true;
+                        $scope.closeModal();
+                    })
+                    .catch(function(error) {
+                        $scope.loading = false;
+
+                        // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+
+                        if (errorCode === 'auth/wrong-password') {
+                          $scope.label_error_pass = 'Contraseña incorrecta.';
+                        } else {
+                            $scope.label_error_user = 'E-mail incorrecto.';
+                        }
+                        console.log(error);
+                    });
         };
 
         $scope.cleanLabelError = function() {
             $scope.label_error_user = '';
             $scope.label_error_pass = '';
             $scope.icon_success = false;           
-        };
-
-        $scope.loadinLogin = function(){
-            $scope.loading = true;
-            $timeout(function(){
-                $scope.loading = false;
-                $scope.icon_success = true;
-                $rootScope.status_login = true;
-                $scope.closeModal();
-            },2000);
         };
 
         $scope.closeModal = function(){

@@ -1,5 +1,5 @@
 angular.module('app-cmpc')
-    .controller("MainController", ["$scope", '$location', 'testService', '$rootScope', function($scope, $location,testService, $rootScope) {
+    .controller("MainController", ["$scope", '$location', 'testService', '$rootScope' ,'loginService', function($scope, $location,testService, $rootScope, loginService) {
         ///Llamada test servicio
         /* $scope.data = [];
         console.log('controller mainn!!');
@@ -45,7 +45,15 @@ angular.module('app-cmpc')
             }
         };
         vm.logout = function(){
-            $rootScope.status_login = false;
+            console.log('exceeeeees');
+            console.log('logoutt');
+            loginService.logoutFirebase()
+                .then(function(result){
+                    console.log('resulta',result);
+                    $rootScope.status_login = false;        
+                })
+
+            
         };
         
 

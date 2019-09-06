@@ -1,8 +1,12 @@
 angular.module('app-cmpc')
-    .service("loginService", ["$http", '$rootScope', '$firebaseAuth', function($http,$rootScope, $firebaseAuth) {
+    .service("loginService", ["$http", '$rootScope', '$firebaseAuth', function($http, $rootScope, $firebaseAuth) {
 
-      var firebaseAuthObject = $firebaseAuth();
-      
+      /* var firebaseAuthObject = $firebaseAuth(); */
+      /* console.log(Auth); */
+
+
+      var auth = $firebaseAuth();
+
       return {
         obtenerData: function(){
               return $http({
@@ -32,7 +36,12 @@ angular.module('app-cmpc')
                 }
         },
         loginFirebase: function(user, pass){
-          return firebaseAuthObject.$signInWithEmailAndPassword(user, pass);
+          console.log('auth', auth);
+          return auth.$signInWithEmailAndPassword(user, pass);
+        },
+        logoutFirebase: function(){
+          console.log('logggouuttt');
+          return auth.$signOut();
         }
       }
     }   
